@@ -82,42 +82,6 @@ export const getProductType = () => {
 }
 
 /**
- * @method 表单校验方法
- * @param {Object} params - 参数
- * @param {Object} rules - 规则
- * @returns {Array}
- */
-export const Validate = async (params, rules) => {
-  return new Promise((resolve, reject) => {
-    let result = {};
-    for (let i in rules) {
-      for (let k in rules[i]) {
-        const rule = rules[i][k];
-        if (rule.required && !params[i]) {
-          result[i] = rule.message;
-          break;
-        }
-        if (rule.length && params[i].length > rule.length) {
-          result[i] = rule.message;
-          break;
-        }
-        if (rule.type == 'number' && params[i]) {
-          if (Object.prototype.toString.call(params[i]) != '[object Number]') {
-            result[i] = rule.message;
-            break;
-          }
-        }
-      }
-    }
-    if (Object.keys(result).length > 0) {
-      reject(result);
-    } else {
-      resolve({});
-    }
-  });
-}
-
-/**
  * @method 获取浏览器的语言信息
  * @returns {String}
  */

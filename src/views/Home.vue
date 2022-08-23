@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <section class="section1">
-      <div class="left">
-        <div class="left-nav">
+      <div class="containers">
+        <div class="box">
           <div><img src="../assets/logo.png" alt=""></div>
           <div class="title">
             <div>Mission Go</div>
@@ -11,8 +11,10 @@
           <div class="btn">下载</div>
         </div>
         <div class="accessories"></div>
+        <div class="left">
+        </div>
+        <div class="right"></div>
       </div>
-      <div class="right"></div>
     </section>
     <section class="section2">
       <div class="title">赚钱应用程序</div>
@@ -32,8 +34,8 @@
           </div>
           <div class="p1"><img src="../assets/gold.png" alt=""></div>
           <div class="p2"><img src="../assets/gold.png" alt=""></div>
-          <div class="p3"><img src="../assets/side.png" alt=""></div>
-          <div class="p4"><img src="../assets/accessories.png" alt=""></div>
+          <div class="p3"></div>
+          <div class="p4"></div>
         </div>
       </div>
     </section>
@@ -121,62 +123,74 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.home{
+.home {
   padding-bottom: 200px;
 }
+
 .section1 {
-  height: 1050px;
+  height: 1080px;
   .fj(center);
+  position: relative;
+
+
+  .box {
+    font-family: PingFang SC;
+    padding-top: 285px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .title {
+      font-size: 60px;
+      font-weight: 800;
+      color: #333333;
+      margin: 48px 0 64px;
+      line-height: 100px;
+    }
+
+    .btn {
+      height: 88px;
+      line-height: 88px;
+      padding: 0 105px;
+      background: #5F16D9;
+      border-radius: 22px;
+      font-weight: bold;
+      color: #FFFFFF;
+      font-size: 40px;
+    }
+  }
+
+  .accessories {
+    height: 82px;
+    width: 361px;
+    background: url(../assets/accessories.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 3%;
+    left: 10%;
+  }
 
   .left {
     width: 55%;
+    height: 100%;
     margin-top: 42px;
     background: url('../assets/bg1.png') no-repeat;
-    background-size: 60% 115%;
-
-    &-nav {
-      font-family: PingFang SC;
-      padding: 167px 0 0 360px;
-
-      img {
-        width: 100px;
-        height: 100px;
-      }
-
-      .title {
-        font-size: 60px;
-        font-weight: 800;
-        color: #333333;
-        margin: 48px 0 64px;
-        line-height: 100px;
-      }
-
-      .btn {
-        height: 88px;
-        line-height: 88px;
-        padding: 0 105px;
-        background: #5F16D9;
-        border-radius: 22px;
-        font-weight: bold;
-        color: #FFFFFF;
-        font-size: 40px;
-      }
-    }
-
-    .accessories {
-      height: 82px;
-      width: 361px;
-      background: url(../assets/accessories.png) no-repeat;
-      background-size: 100% 100%;
-      margin: 176px 0 0 20%;
-    }
+    background-size: contain;
+    position: absolute;
+    top: 3%;
+    left: 0;
   }
 
   .right {
     width: 45%;
     height: 85%;
     background: url(../assets/bg2.png) no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
+    position: absolute;
+    top: 3%;
+    right: 0;
   }
 }
 
@@ -201,7 +215,7 @@ export default {
       width: 40%;
       height: 100%;
       background: url(../assets/phone1.png) no-repeat;
-      background-size: 100% 85%;
+      background-size: contain;
     }
 
     .right {
@@ -273,22 +287,20 @@ export default {
         position: absolute;
         bottom: 0px;
         right: 0px;
-
-        >img {
-          width: 189px;
-          height: 594px;
-        }
+        width: 189px;
+        height: 594px;
+        background: url(../assets/side.png) no-repeat;
+        background-size: contain;
       }
 
       .p4 {
         position: absolute;
         bottom: 0px;
         left: 50%;
-
-        >img {
-          width: 361px;
-          height: 82px;
-        }
+        width: 361px;
+        height: 82px;
+        background: url(../assets/accessories.png) no-repeat;
+        background-size: contain;
       }
     }
   }

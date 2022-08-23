@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <router-view />
+    <router-view />
   </div>
 </template>
 
@@ -44,6 +44,7 @@ a:hover {
 #app {
   min-width: 1200px;
   min-height: 100%;
+  font-family: PingFang SC;
   background-color: #F8F8F8;
 }
 

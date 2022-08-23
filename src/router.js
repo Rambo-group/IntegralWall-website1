@@ -7,13 +7,28 @@ const routes = [
   {
     path: "/",
     name: "Navigation",
-    component: () => import('./components/Navigation.vue'),
+    component: () => import("./components/Navigation.vue"),
     children: [
       {
         path: "/",
-        name: "Home",
+        name: "home",
         component: () => import("./views/Home.vue"),
       },
+      {
+        path: "/download",
+        name: "download",
+        component: () => import("./views/Download.vue"),
+      },
+      {
+        path: "/blog",
+        name: "blog",
+        component: () => import("./views/Blog.vue"),
+      },
+      {
+        path: "/question-answer",
+        name: "question-answer",
+        component: () => import("./views/question-answer.vue"),
+      }
     ],
   },
 ];

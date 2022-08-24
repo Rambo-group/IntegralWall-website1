@@ -21,7 +21,10 @@ body {
 img {
   display: block;
 }
-
+ul{
+  margin: 0 !important;
+  padding: 0 !important;
+}
 ul li {
   list-style: none;
 }

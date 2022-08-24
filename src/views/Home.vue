@@ -41,16 +41,14 @@
     </section>
     <section class="section3">
       <div class="left">
-        <div class="left-nav">
+        <div class="box">
           <div><img src="../assets/logo.png" alt=""></div>
-          <div class="title">在Mission Go这个赚钱的应用中，有成百上千种有趣任务
-            其中定有一种适合你。别担心不能顺利完成，只要根据任务
-            指南来操作就能获得金币，然后用收集到的金币去兑换现金
-            简单便捷。Mission Go 玩法多多，赚钱多多！</div>
+          <div class="title">在Mission
+            Go这个赚钱的应用中，有成百上千种有趣任务其中定有一种适合你。别担心不能顺利完成，只要根据任务指南来操作就能获得金币，然后用收集到的金币去兑换现金简单便捷。Mission Go 玩法多多，赚钱多多！</div>
           <div class="btn">下载</div>
         </div>
-        <div class="accessories"></div>
         <div class="p1"><img src="../assets/gold.png" alt=""></div>
+        <div class="accessories"></div>
       </div>
       <div class="right"></div>
     </section>
@@ -92,24 +90,22 @@
       <div class="right"></div>
     </section>
     <section class="section6">
-      <div class="content">
-        <div class="left"></div>
-        <div class="right">
-          <div class="right-nav">
-            <div><img src="../assets/logo.png" alt=""></div>
-            <div class="title">
-              <div>Mission Go是 2022年最简单的赚钱应用程序之一</div>
-              <div>简单做做任务收集到的金币可以兑换现金。</div>
-              <div>金币越多你可以兑换的现金就越多！</div>
-              <div>快下载去赚金币吧！</div>
-            </div>
-            <div class="btn">下载</div>
+      <div class="left"></div>
+      <div class="right">
+        <div class="right-nav">
+          <div><img src="../assets/logo.png" alt=""></div>
+          <div class="title">
+            <div>Mission Go是 2022年最简单的赚钱应用程序之一</div>
+            <div>简单做做任务收集到的金币可以兑换现金。</div>
+            <div>金币越多你可以兑换的现金就越多！</div>
+            <div>快下载去赚金币吧！</div>
           </div>
-          <div class="p1"><img src="../assets/gold.png" alt=""></div>
-          <div class="p2"><img src="../assets/gold.png" alt=""></div>
-          <div class="p3"><img src="../assets/side.png" alt=""></div>
-          <div class="p4"><img src="../assets/accessories.png" alt=""></div>
+          <div class="btn">下载</div>
         </div>
+        <div class="p1"><img src="../assets/gold.png" alt=""></div>
+        <div class="p2"><img src="../assets/gold.png" alt=""></div>
+        <div class="p3"><img src="../assets/side.png" alt=""></div>
+        <div class="p4"><img src="../assets/accessories.png" alt=""></div>
       </div>
     </section>
   </div>
@@ -125,201 +121,19 @@ export default {
 <style lang="less" scoped>
 .home {
   padding-bottom: 200px;
-}
 
-.section1 {
-  height: 1080px;
-  .fj(center);
-  position: relative;
-
-
-  .box {
-    font-family: PingFang SC;
-    padding-top: 285px;
-
-    img {
-      width: 100px;
-      height: 100px;
-    }
-
-    .title {
-      font-size: 60px;
-      font-weight: 800;
-      color: #333333;
-      margin: 48px 0 64px;
-      line-height: 100px;
-    }
-
-    .btn {
-      height: 88px;
-      line-height: 88px;
-      padding: 0 105px;
-      background: #5F16D9;
-      border-radius: 22px;
-      font-weight: bold;
-      color: #FFFFFF;
-      font-size: 40px;
-    }
-  }
-
-  .accessories {
-    height: 82px;
-    width: 361px;
-    background: url(../assets/accessories.png) no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: 3%;
-    left: 10%;
-  }
-
-  .left {
-    width: 55%;
-    height: 100%;
-    margin-top: 42px;
-    background: url('../assets/bg1.png') no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 3%;
-    left: 0;
-  }
-
-  .right {
-    width: 45%;
-    height: 85%;
-    background: url(../assets/bg2.png) no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 3%;
-    right: 0;
-  }
-}
-
-.section2 {
-  height: 1080px;
-  position: relative;
-  padding-top: 88px;
-
-  .title {
-    font-size: 60px;
-    font-family: PingFang SC;
-    font-weight: 800;
-    color: #333333;
-    text-align: center;
-  }
-
-  .content {
+  .section1 {
+    height: 1080px;
     .fj(center);
-    height: 100%;
-
-    .left {
-      width: 40%;
-      height: 100%;
-      background: url(../assets/phone1.png) no-repeat;
-      background-size: contain;
-    }
-
-    .right {
-      width: 60%;
-      padding: 19px 50px;
-      font-family: PingFang SC;
-      position: relative;
-
-      .text {
-        font-size: 30px;
-        font-weight: bold;
-        color: #666666;
-        text-align: left;
-      }
-
-      .about {
-        padding: 149px 18px;
-
-        .txt {
-          font-size: 20px;
-          line-height: 38px;
-          font-weight: 500;
-          color: #666666;
-        }
-
-        .tit {
-          font-size: 28px;
-          margin: 36px 0 25px;
-          font-weight: bold;
-          color: #333333;
-        }
-
-        .btn {
-          font-size: 40px;
-          font-weight: bold;
-          color: #FFFFFF;
-          background-color: #5F16D9;
-          border-radius: 22px;
-          height: 88px;
-          line-height: 88px;
-          padding: 0 105px;
-          margin-top: 67px;
-        }
-      }
-
-      .p1 {
-        position: absolute;
-        top: 3%;
-        left: 50%;
-
-        >img {
-          width: 68px;
-          height: 75px;
-        }
-      }
-
-      .p2 {
-        position: absolute;
-        top: -10%;
-        left: 75%;
-
-        >img {
-          width: 84px;
-          height: 93px;
-        }
-      }
-
-      .p3 {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        width: 189px;
-        height: 594px;
-        background: url(../assets/side.png) no-repeat;
-        background-size: contain;
-      }
-
-      .p4 {
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        width: 361px;
-        height: 82px;
-        background: url(../assets/accessories.png) no-repeat;
-        background-size: contain;
-      }
-    }
-  }
-
-
-}
-
-.section3 {
-  height: 1080px;
-  margin-top: 200px;
-  .fa(center);
-
-  .left {
-    width: 60%;
     position: relative;
 
-    &-nav {
+    .containers {
+      padding: 0;
+    }
+
+    .box {
       font-family: PingFang SC;
-      padding: 167px 0 0 360px;
+      padding-top: 225px;
 
       img {
         width: 100px;
@@ -327,11 +141,11 @@ export default {
       }
 
       .title {
-        font-size: 28px;
-        line-height: 42px;
-        font-weight: bold;
+        font-size: 60px;
+        font-weight: 800;
         color: #333333;
-        margin: 68px 60px 68px 0;
+        margin: 48px 0 64px;
+        line-height: 100px;
       }
 
       .btn {
@@ -350,54 +164,161 @@ export default {
       height: 82px;
       width: 361px;
       background: url(../assets/accessories.png) no-repeat;
-      background-size: 100% 100%;
-      margin: 176px 0 0 20%;
-    }
-
-    .p1 {
+      background-size: contain;
       position: absolute;
-      right: 23%;
-      top: -5%;
-
-      >img {
-        width: 158px;
-        height: 176px;
-      }
+      bottom: 10%;
+      left: 10%;
     }
-  }
-
-  .right {
-    width: 40%;
-    height: 85%;
-    background: url(../assets/phone2.png) no-repeat;
-    background-size: 100% 100%;
-  }
-}
-
-.section4 {
-  height: 1080px;
-  position: relative;
-  margin-top: 200px;
-
-  .content {
-    .fj(center);
-    height: 100%;
 
     .left {
-      margin-top: 157px;
-      width: 40%;
+      width: 55%;
       height: 100%;
-      background: url(../assets/phone3.png) no-repeat;
-      background-size: 100% 80%;
+      margin-top: 42px;
+      background: url('../assets/bg1.png') no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 3%;
+      left: 0;
     }
 
     .right {
-      width: 60%;
-      padding: 0 100px;
-      position: relative;
-      .fa(center);
+      width: 45%;
+      height: 85%;
+      background: url(../assets/bg2.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 3%;
+      right: 0;
+    }
+  }
 
-      &-nav {
+  .section2 {
+    height: 1080px;
+    position: relative;
+    padding-top: 88px;
+
+    .title {
+      font-size: 60px;
+      font-family: PingFang SC;
+      font-weight: 800;
+      color: #333333;
+      text-align: center;
+    }
+
+    .content {
+      .fj(center);
+
+      .left {
+        width: 40%;
+        height: 835px;
+        background: url(../assets/phone1.png) no-repeat;
+        background-size: contain;
+      }
+
+      .right {
+        width: 60%;
+        padding: 19px 50px;
+        font-family: PingFang SC;
+        position: relative;
+
+        .text {
+          font-size: 30px;
+          font-weight: bold;
+          color: #666666;
+          text-align: left;
+        }
+
+        .about {
+          padding: 149px 18px;
+
+          .txt {
+            font-size: 20px;
+            line-height: 38px;
+            font-weight: 500;
+            color: #666666;
+          }
+
+          .tit {
+            font-size: 28px;
+            margin: 36px 0 25px;
+            font-weight: bold;
+            color: #333333;
+          }
+
+          .btn {
+            font-size: 40px;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #5F16D9;
+            border-radius: 22px;
+            height: 88px;
+            line-height: 88px;
+            padding: 0 105px;
+            margin-top: 67px;
+          }
+        }
+
+        .p1 {
+          position: absolute;
+          top: 3%;
+          left: 50%;
+
+          >img {
+            width: 68px;
+            height: 75px;
+          }
+        }
+
+        .p2 {
+          position: absolute;
+          top: -10%;
+          left: 75%;
+
+          >img {
+            width: 84px;
+            height: 93px;
+          }
+        }
+
+        .p3 {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          width: 189px;
+          height: 594px;
+          background: url(../assets/side.png) no-repeat;
+          background-size: contain;
+        }
+
+        .p4 {
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          width: 361px;
+          height: 82px;
+          background: url(../assets/accessories.png) no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
+
+  }
+
+  .section3 {
+    height: 1080px;
+    margin-top: 200px;
+    .fa(center);
+    position: relative;
+
+    .left {
+      width: 60%;
+      height: 90%;
+      position: relative;
+      .flex(end, center);
+
+      .box {
+        width: 70%;
         font-family: PingFang SC;
 
         img {
@@ -406,14 +327,11 @@ export default {
         }
 
         .title {
+          font-size: 28px;
+          line-height: 42px;
           font-weight: bold;
           color: #333333;
-          margin: 68px 60px 68px 0;
-
-          >div {
-            font-size: 28px;
-            line-height: 48px;
-          }
+          margin: 68px 40px 68px 0;
         }
 
         .btn {
@@ -430,134 +348,231 @@ export default {
 
       .p1 {
         position: absolute;
-        top: 13%;
-        left: 50%;
+        right: 17%;
+        top: -3%;
 
         >img {
-          width: 68px;
-          height: 75px;
+          width: 158px;
+          height: 176px;
         }
       }
 
-      .p2 {
+      .accessories {
+        height: 82px;
+        width: 25%;
+        background: url(../assets/accessories.png) no-repeat;
+        background-size: contain;
         position: absolute;
-        top: 3%;
-        left: 72%;
-
-        >img {
-          width: 84px;
-          height: 93px;
-        }
-      }
-
-      .p3 {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-
-        >img {
-          width: 189px;
-          height: 594px;
-        }
-      }
-
-      .p4 {
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-
-        >img {
-          width: 361px;
-          height: 82px;
-        }
-      }
-    }
-  }
-
-
-}
-
-.section5 {
-  height: 1080px;
-  margin-top: 200px;
-  .fa(center);
-
-  .left {
-    width: 60%;
-    position: relative;
-
-    &-nav {
-      font-family: PingFang SC;
-      padding: 167px 0 0 360px;
-
-      img {
-        width: 100px;
-        height: 100px;
-      }
-
-      .title {
-        font-size: 28px;
-        line-height: 42px;
-        font-weight: bold;
-        color: #333333;
-        margin: 68px 108px 68px 0;
-      }
-
-      .btn {
-        height: 88px;
-        line-height: 88px;
-        padding: 0 105px;
-        background: #5F16D9;
-        border-radius: 22px;
-        font-weight: bold;
-        color: #FFFFFF;
-        font-size: 40px;
+        bottom: -3%;
+        left: 10%;
       }
     }
 
-    .accessories {
-      height: 82px;
-      width: 361px;
-      background: url(../assets/accessories.png) no-repeat;
-      background-size: 100% 100%;
-      margin: 176px 0 0 20%;
-    }
 
-    .p1 {
+
+    .right {
+      width: 40%;
+      height: 90%;
+      background: url(../assets/phone2.png) no-repeat;
+      background-size: contain;
       position: absolute;
-      right: 10%;
-      top: -5%;
-
-      >img {
-        width: 158px;
-        height: 176px;
-      }
+      top: 3%;
+      right: 0;
     }
   }
 
-  .right {
-    width: 40%;
-    height: 85%;
-    background: url(../assets/phone4.png) no-repeat;
-    background-size: 100% 100%;
+  .section4 {
+    height: 1080px;
+    position: relative;
+    margin-top: 200px;
+
+    .content {
+      .fj(center);
+      height: 100%;
+
+      .left {
+        margin-top: 157px;
+        width: 40%;
+        height: 100%;
+        background: url(../assets/phone3.png) no-repeat;
+        background-size: 100% 80%;
+      }
+
+      .right {
+        width: 60%;
+        padding: 0 100px;
+        position: relative;
+        .fa(center);
+
+        &-nav {
+          font-family: PingFang SC;
+
+          img {
+            width: 100px;
+            height: 100px;
+          }
+
+          .title {
+            font-weight: bold;
+            color: #333333;
+            margin: 68px 60px 68px 0;
+
+            >div {
+              font-size: 28px;
+              line-height: 48px;
+            }
+          }
+
+          .btn {
+            height: 88px;
+            line-height: 88px;
+            padding: 0 105px;
+            background: #5F16D9;
+            border-radius: 22px;
+            font-weight: bold;
+            color: #FFFFFF;
+            font-size: 40px;
+          }
+        }
+
+        .p1 {
+          position: absolute;
+          top: 13%;
+          left: 50%;
+
+          >img {
+            width: 68px;
+            height: 75px;
+          }
+        }
+
+        .p2 {
+          position: absolute;
+          top: 3%;
+          left: 72%;
+
+          >img {
+            width: 84px;
+            height: 93px;
+          }
+        }
+
+        .p3 {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+
+          >img {
+            width: 189px;
+            height: 594px;
+          }
+        }
+
+        .p4 {
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+
+          >img {
+            width: 361px;
+            height: 82px;
+          }
+        }
+      }
+    }
+
+
   }
-}
 
-.section6 {
-  height: 1080px;
-  position: relative;
-  margin-top: 200px;
+  .section5 {
+    height: 1080px;
+    margin-top: 200px;
+    position: relative;
+    .fa(center);
 
-  .content {
-    .fj(center);
-    height: 100%;
+    .left {
+      width: 60%;
+      height: 100%;
+      position: relative;
+      .flex(end, center);
+
+      &-nav {
+        font-family: PingFang SC;
+        width: 70%;
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+
+        .title {
+          font-size: 28px;
+          line-height: 42px;
+          font-weight: bold;
+          color: #333333;
+          margin: 68px 108px 68px 0;
+        }
+
+        .btn {
+          height: 88px;
+          line-height: 88px;
+          padding: 0 105px;
+          background: #5F16D9;
+          border-radius: 22px;
+          font-weight: bold;
+          color: #FFFFFF;
+          font-size: 40px;
+        }
+      }
+
+      .accessories {
+        height: 82px;
+        width: 361px;
+        background: url(../assets/accessories.png) no-repeat;
+        background-size: contain;
+        position: absolute;
+        bottom: 0%;
+        left: 10%;
+      }
+
+      .p1 {
+        position: absolute;
+        right: 15%;
+        top: 4%;
+
+        >img {
+          width: 158px;
+          height: 176px;
+        }
+      }
+    }
+
+    .right {
+      width: 40%;
+      height: 90%;
+      background: url(../assets/phone4.png) no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 3%;
+      right: 0;
+    }
+  }
+
+  .section6 {
+    height: 1080px;
+    position: relative;
+    margin-top: 200px;
+    .fj(end);
 
     .left {
       margin-top: 157px;
       width: 40%;
       height: 100%;
       background: url(../assets/phone5.png) no-repeat;
-      background-size: 100% 80%;
+      background-size: contain;
+      position: absolute;
+      top: 3%;
+      left: 0;
     }
 
     .right {
@@ -641,8 +656,20 @@ export default {
         }
       }
     }
+
+
   }
+}
 
-
+@media screen and (max-width: 1599px) {
+  .section1 {
+    height: 900px !important;
+    .box{
+      img{
+        width: 70px !important;
+        height: 70px !important;
+      }
+    }
+  }
 }
 </style>

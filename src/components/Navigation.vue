@@ -1,28 +1,24 @@
 <template>
   <div class="main">
-    <div class="navigation">
-      <div class="containers">
-        <div id="header" class="header-scroll">
-          <div class="logo"><img src="@assets/logo.png" alt=""><span>Mission Go</span></div>
-          <ul class="menu">
-            <li v-for="item in list" :key="item.id">{{item.name}}</li>
-            <li class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="true">
-                语言选择
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
+    <div id="header" :class="topClass">
+      <div class="logo"><img src="@assets/logo.png" alt=""><span>Mission Go</span></div>
+      <ul class="menu">
+        <li v-for="item in list" :key="item.id" @click="jumpTo(item.url)">{{ item.name }}</li>
+        <li class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            语言选择
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
           </ul>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
     <router-view />
     <div class="bottom">
@@ -35,7 +31,7 @@
               <div class="txt">并获取更多信息。</div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-2">
             <div class="answer">
               <div class="title">支持</div>
               <div class="txt">问答</div>
@@ -69,26 +65,53 @@ export default {
     return {
       list: [{
         id: 1,
-        name: '主页'
+        name: '主页',
+        url: '/'
       }, {
         id: 2,
-        name: '下载'
+        name: '下载',
+        url: '/download'
       }, {
         id: 3,
-        name: '问答'
+        name: '问答',
+        url: '/blog'
       }, {
         id: 4,
-        name: '博客'
-      }]
+        name: '博客',
+        url: '/question-answer'
+      }],
+      topClass: ''
     }
   },
+  methods: {
+    jumpTo(url) {
+      this.$router.push({ path: url })
+    }
+  },
+  mounted() {
+    document.onscroll = () => {
+      if ($(window).scrollTop() > 30) {
+        this.topClass = "header-scroll"
+      } else {
+        this.topClass = ""
+      }
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
 #header {
+  position: sticky;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
   .flex(space-between, center);
-  height: 140px;
-  max-width: 1200px;
+  max-width: 1366px;
+  width: 100%;
+  padding: 32px 43px 32px 83px;
+  transition: all .5s ease;
 
   .logo {
     .fa(center);
@@ -118,6 +141,24 @@ export default {
       color: #666666;
       cursor: pointer;
       line-height: 40px;
+      transition: all .5s ease;
+
+      &:hover {
+        color: #5F16D9;
+
+        &::after {
+          background: #5F16D9;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: transparent;
+        border-radius: 2px;
+      }
     }
 
     .active {
@@ -135,15 +176,14 @@ export default {
   }
 }
 
-// .header-scroll{
-//   position: fixed;
-//   left: 0;
-//   right: 0;
-//   border-radius: 16px;
-//   margin: 0 auto;
-//   background-color: #fff;
-//   box-shadow: 0 4px 16px 0 rgb(72 72 72 / 16%);
-// }
+.header-scroll {
+  top: 10px !important;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(72, 72, 72, 16%);
+}
+
+
 .bottom {
   .fa(center);
   height: 400px;

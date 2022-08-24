@@ -59,6 +59,42 @@ a:hover {
   margin-left: auto;
 }
 
+@keyframes bottomShow {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes leftShow {
+  0% {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightShow {
+  0% {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .ellipsis {
   overflow: hidden;
   white-space: nowrap;

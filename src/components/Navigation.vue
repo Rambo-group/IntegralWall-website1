@@ -3,19 +3,16 @@
     <div id="header" :class="topClass">
       <div class="logo"><img src="@assets/logo.png" alt=""><span>Mission Go</span></div>
       <ul class="menu">
-        <li v-for="item in list" :key="item.id" @click="jumpTo(item.url)">{{ item.name }}</li>
-        <li class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-            语言选择
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+        <li v-for="item in list" :key="item.id" @click="jumpTo(item.url, item.id)"
+          :class="{ active: active == item.id }">{{ item.name }}</li>
+        <li class="dropdown" @click.stop="showNav($event)">
+          <span>语言选择</span>
+          <ul class="nav-menu" v-show="menuShow">
+            <li>英语</li>
+            <li>泰语</li>
+            <li>越南语</li>
+            <li>西班牙语</li>
+            <li>葡萄牙语</li>
           </ul>
         </li>
       </ul>
@@ -80,15 +77,34 @@ export default {
         name: '博客',
         url: '/question-answer'
       }],
-      topClass: ''
+      topClass: '',
+      menuShow: false,
+      active: '1'
     }
   },
   methods: {
-    jumpTo(url) {
+    //导航栏跳转
+    jumpTo(url, id) {
       this.$router.push({ path: url })
+      this.active = id
+    },
+    //语言选择展示隐藏
+    showNav(e) {
+      this.menuShow = !this.menuShow
+      console.log(e.target);
+    },
+    activeClass() {
+      let path = this.$route.path
+      this.list.forEach((item) => {
+        if (item.url === path) {
+          this.active = item.id
+        }
+      })
     }
   },
   mounted() {
+    this.activeClass()
+    //滚动top栏浮动
     document.onscroll = () => {
       if ($(window).scrollTop() > 30) {
         this.topClass = "header-scroll"
@@ -98,6 +114,7 @@ export default {
     }
   }
 };
+
 </script>
 <style lang="less" scoped>
 #header {
@@ -148,6 +165,7 @@ export default {
 
         &::after {
           background: #5F16D9;
+          border-color: #5F16D9 transparent transparent;
         }
       }
 
@@ -171,6 +189,47 @@ export default {
         height: 3px;
         background: #5F16D9;
         border-radius: 2px;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+
+      &::after {
+        content: '';
+        height: 0;
+        width: 0;
+        border-width: 8px;
+        border-color: #666666 transparent transparent;
+        border-style: solid;
+        top: 50%;
+        position: absolute;
+        left: 120%;
+        transform: translate(-50%, -25%);
+        background: transparent !important;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background: #fff;
+        box-shadow: 0px 6px 12px 1px rgba(24, 39, 75, 0.04), 0px 8px 24px rgba(24, 39, 75, 0.05);
+
+        >li {
+          padding: 10px;
+          line-height: 22px !important;
+          font-size: 12px;
+          font-weight: bold;
+          color: #666666;
+          text-align: center;
+          transition: all 0.4s;
+
+          &:hover {
+            color: #FFFFFF;
+            background-color: #5F16D9;
+          }
+        }
       }
     }
   }

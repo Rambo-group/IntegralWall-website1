@@ -18,7 +18,7 @@
     <section class="section2">
       <div class="containers">
         <div class="centent">
-          <div class="head" @click="btnclick">
+          <div class="head" @click="btnclick($event)">
             <div class="txt"> 问：如何从 Mission Go apk 中赚钱？</div>
             <div class="mark">NEW</div>
             <div class="arrow"></div>
@@ -38,14 +38,21 @@
 export default {
   data() {
     return {
-      isShow:false
+      isShow: true,
+
     }
   },
   methods: {
-    btnclick() {
-      this.isShow=true
+    btnclick(e) {
+      const answer = e.currentTarget.nextElementSibling
+      if (this.isShow) {
+        $(answer).slideUp(400)
+      } else {
+        $(answer).slideDown(400)
+      }
+     this.isShow = !this.isShow
     }
-   }
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -155,11 +162,14 @@ export default {
       border-top: 2px solid #EDEDED;
       padding-top: 70px;
       margin-top: 70px;
+      display: none;
+      overflow: hidden;
 
       >div {
         font-size: 18px;
         font-weight: bold;
         color: #666666;
+        transition: all .4s;
       }
 
       span {

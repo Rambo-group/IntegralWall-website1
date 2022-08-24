@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section class="section1">
+    <section class="section1" id="section1">
       <div class="containers">
         <div class="box">
           <div><img src="../assets/logo.png" alt=""></div>
@@ -16,11 +16,11 @@
         <div class="right"></div>
       </div>
     </section>
-    <section class="section2">
+    <section class="section2" id="section2">
       <div class="title">赚钱应用程序</div>
       <div class="content">
-        <div class="left"></div>
-        <div class="right">
+        <div class="left" id="section2_left"></div>
+        <div class="right" id="section2_right">
           <div class="text">关于Mission Go</div>
           <div class="about">
             <div class="txt">Mission Go是一个轻松赚钱的应用程序，你可以通过完成简单的任务来获取金币兑换现金奖励。</div>
@@ -39,8 +39,8 @@
         </div>
       </div>
     </section>
-    <section class="section3">
-      <div class="left">
+    <section class="section3" id="section3">
+      <div class="left" id="section3_left">
         <div class="box">
           <div><img src="../assets/logo.png" alt=""></div>
           <div class="title">在Mission
@@ -50,12 +50,12 @@
         <div class="p1"><img src="../assets/gold.png" alt=""></div>
         <div class="accessories"></div>
       </div>
-      <div class="right"></div>
+      <div class="right" id="section3_right"></div>
     </section>
-    <section class="section4">
+    <section class="section4" id="section4">
       <div class="content">
-        <div class="left"></div>
-        <div class="right">
+        <div class="left" id="section4_left"></div>
+        <div class="right" id="section4_right">
           <div class="right-nav">
             <div><img src="../assets/logo.png" alt=""></div>
             <div class="title">
@@ -72,8 +72,8 @@
         </div>
       </div>
     </section>
-    <section class="section5">
-      <div class="left">
+    <section class="section5" id="section5">
+      <div class="left" id="section5_left">
         <div class="left-nav">
           <div><img src="../assets/logo.png" alt=""></div>
           <div class="title">Mission Go是目前最快且经过验证的赚钱应用程序之一
@@ -87,11 +87,11 @@
         <div class="accessories"></div>
         <div class="p1"><img src="../assets/gold.png" alt=""></div>
       </div>
-      <div class="right"></div>
+      <div class="right" id="section5_right"></div>
     </section>
-    <section class="section6">
-      <div class="left"></div>
-      <div class="right">
+    <section class="section6" id="section6">
+      <div class="left" id="section6_left"></div>
+      <div class="right" id="section6_right">
         <div class="right-nav">
           <div><img src="../assets/logo.png" alt=""></div>
           <div class="title">
@@ -116,6 +116,27 @@ export default {
     return {
     }
   },
+  mounted() {
+    $(document).scroll(() => {
+      for (let index = 1; index <= 6; index++) {
+        this.anim(`#section${index}`);
+      }
+    });
+
+  },
+  methods: {
+    anim(selector) {
+      let winTop = $(window).height();
+      let winScrolled = $(window).scrollTop();
+      let selectorTop = $(selector).offset().top;
+      if (winScrolled + winTop > selectorTop - 10) {
+        let selector_left = selector + "_left"
+        let selector_right = selector+"_right"
+        $(selector_left).css("animation", "leftShow 1.5s forwards")
+        $(selector_right).css("animation", "rightShow 1.5s forwards")
+      }
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -664,8 +685,9 @@ export default {
 @media screen and (max-width: 1599px) {
   .section1 {
     height: 900px !important;
-    .box{
-      img{
+
+    .box {
+      img {
         width: 70px !important;
         height: 70px !important;
       }

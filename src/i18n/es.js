@@ -1,12 +1,12 @@
 export default {
   //西班牙语
-  lang: 'English',
+  lang: 'es',
   //主页
   home:'página de inicio',
   answer:'Preguntas y respuestas',
   blog:'Blog',
   language:'Selección de idioma',
-  title: 'Mission Go hace dinero fácil en tu teléfono',
+  title: 'hace dinero fácil en tu teléfono',
   download: 'descargar',
   module1_tit: 'ganar dinero aplicación',
   txt1: 'Acerca de Misión Ir',

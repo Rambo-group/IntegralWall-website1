@@ -74,14 +74,14 @@ export default {
 
   .box {
     font-family: PingFang SC;
-    padding-top: 49px;
+    padding-top: 16%;
     z-index: 99;
     width: 45%;
     position: relative;
 
     .title {
       font-size: 60px;
-      line-height: 100px;
+      line-height: 90px;
       font-weight: 800;
       color: #333333;
     }
@@ -157,5 +157,39 @@ export default {
   font-weight: bold;
   color: #FFFFFF;
   font-size: 40px;
+}
+
+@media screen and (max-width: 1599px) {
+  .title {
+    font-size: 50px !important;
+    line-height: 80px !important;
+  }
+
+  .btn {
+    font-size: 30px !important;
+    padding: 0 90px !important;
+  }
+
+  .section2 {
+    margin-bottom: 0 !important;
+    .title{
+      margin-top: 50px !important;
+    }
+    .box{
+      >div{
+        img{
+          width: 280px !important;
+          height: 280px !important;
+        }
+        .tit{
+          font-size: 28px !important;
+          margin-top: 14px !important;
+        }
+        .txt{
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
 }
 </style>

@@ -114,14 +114,18 @@ export default {
   },
   methods: {
     anim(selector) {
-      let winTop = $(window).height();
-      let winScrolled = $(window).scrollTop();
-      let selectorTop = $(selector).offset().top;
-      if (winScrolled + winTop > selectorTop - 10) {
-        let selector_left = selector + "_left"
-        let selector_right = selector + "_right"
-        $(selector_left).css("animation", "leftShow 1.5s forwards")
-        $(selector_right).css("animation", "rightShow 1.5s forwards")
+      try {
+        let winTop = $(window).height();
+        let winScrolled = $(window).scrollTop();
+        let selectorTop = $(selector).offset().top;
+        if (winScrolled + winTop > selectorTop - 10) {
+          let selector_left = selector + "_left"
+          let selector_right = selector + "_right"
+          $(selector_left).css("animation", "leftShow 1.5s forwards")
+          $(selector_right).css("animation", "rightShow 1.5s forwards")
+        }
+      } catch (e) {
+        // console.log("");
       }
     }
   }
@@ -142,8 +146,10 @@ export default {
 
     .box {
       font-family: PingFang SC;
-      padding-top: 225px;
+      padding-top: 22%;
       animation: txtShow 4s;
+      position: relative;
+      z-index: 99;
 
       img {
         width: 100px;
@@ -155,7 +161,7 @@ export default {
         font-weight: 800;
         color: #333333;
         margin: 48px 0 64px;
-        line-height: 100px;
+        line-height: 90px;
         width: 60%;
       }
 
@@ -173,7 +179,7 @@ export default {
 
     .accessories {
       height: 82px;
-      width: 361px;
+      width: 20%;
       background: url(../assets/accessories.png) no-repeat;
       background-size: contain;
       position: absolute;
@@ -699,12 +705,24 @@ export default {
 
 @media screen and (max-width: 1599px) {
   .section1 {
-    height: 900px !important;
+    height: 950px !important;
 
     .box {
       img {
         width: 70px !important;
         height: 70px !important;
+      }
+
+      .title {
+        width: 55% !important;
+        font-size: 50px !important;
+        line-height: 80px !important;
+        margin: 32px 0 42px !important;
+      }
+
+      .btn {
+        font-size: 30px !important;
+        padding: 0 90px !important;
       }
     }
   }

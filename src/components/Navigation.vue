@@ -5,11 +5,12 @@
       <ul class="menu">
         <li v-for="item in list" :key="item.id" @click="jumpTo(item.url, item.id)"
           :class="{ active: active == item.id }">{{ $t(item.name) }}</li>
-        <li class="dropdown" @click.stop="showNav($event)">
+        <li class="dropdown" @click.stop="showNav()">
           <span>{{ $t('language') }}</span>
           <ul class="nav-menu" v-show="menuShow">
-            <li v-for="item in Language" :key="item.id" v-Lang="item.lang">{{item.name}}</li>
+            <li v-for="item in Language" :key="item.id" v-Lang="item.lang">{{ item.name }}</li>
           </ul>
+          <div class="arrow" :style="menuShow ? arrowstyle : ''"></div>
         </li>
       </ul>
     </div>
@@ -98,7 +99,8 @@ export default {
       }],
       topClass: '',
       menuShow: false,
-      active: '1'
+      active: '1',
+      arrowstyle: 'transform: rotateZ(540deg);top:25%;left:108%',
     }
   },
   methods: {
@@ -108,9 +110,8 @@ export default {
       this.active = id
     },
     //语言选择展示隐藏
-    showNav(e) {
+    showNav() {
       this.menuShow = !this.menuShow
-      console.log(e.currentTarget.firstElementChild);
     },
     activeClass() {
       let path = this.$route.path
@@ -146,7 +147,7 @@ export default {
   .flex(space-between, center);
   max-width: 1366px;
   width: 100%;
-  padding: 32px 43px 32px 83px;
+  padding: 32px 83px;
   transition: all .5s ease;
 
   .logo {
@@ -182,7 +183,7 @@ export default {
       &:hover {
         color: #5F16D9;
 
-        &::after {
+        .arrow {
           background: #5F16D9;
           border-color: #5F16D9 transparent transparent;
         }
@@ -214,8 +215,7 @@ export default {
     .dropdown {
       position: relative;
 
-      &::after {
-        content: '';
+      .arrow {
         height: 0;
         width: 0;
         border-width: 8px;
@@ -225,6 +225,7 @@ export default {
         position: absolute;
         left: 112%;
         transform: translate(-50%, -25%);
+        // transition: all .1s;
         background: transparent !important;
       }
 

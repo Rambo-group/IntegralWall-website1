@@ -6,7 +6,7 @@ export default {
   answer: "Câu hỏi và trả lời",
   blog: "Blog",
   language: "Sự lựa chọn ngôn ngữ",
-  title: "Mission Go kiếm tiền dễ dàng trên điện thoại của bạn",
+  title: "kiếm tiền dễ dàng trên điện thoại của bạn",
   download: "Tải xuống",
   module1_tit: "ứng dụng kiếm tiền",
   txt1: "Giới thiệu về Mission Go",

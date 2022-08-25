@@ -17,11 +17,11 @@
     <section class="section2">
       <div class="containers">
         <div class="centent" v-for="item in list" :key="item.id">
-          <div class="head" @click="btnclick($event)">
+          <div class="head" @click="btnclick($event, item)">
             <div class="txt">{{ $t(item.ask) }}</div>
             <div class="mark" v-show="item.mark">NEW</div>
             <div class="mark mark1" v-show="item.mark2">HOT</div>
-            <div class="arrow" :style="arrowstyle"></div>
+            <div class="arrow" :style="item.arrow ? arrowstyle : ''"></div>
           </div>
           <div class="answer">
             <div>{{ $t(item.answer) }}</div>
@@ -35,115 +35,122 @@
 export default {
   data() {
     return {
-      isShow: true,
       list: [{
         id: 1,
         ask: 'ask1',
         mark: true,
         mark2: false,
-        answer: 'answer1'
+        answer: 'answer1',
+        arrow: false
       },
       {
         id: 2,
         ask: 'ask2',
         mark: true,
         mark2: false,
-        answer: 'answer2'
+        answer: 'answer2',
+        arrow: false
       },
       {
         id: 3,
         ask: 'ask3',
         mark: false,
         mark2: false,
-        answer: 'answer3'
+        answer: 'answer3',
+        arrow: false
       },
       {
         id: 4,
         ask: 'ask4',
         mark: false,
         mark2: false,
-        answer: 'answer4'
+        answer: 'answer4',
+        arrow: false
       },
       {
         id: 5,
         ask: 'ask5',
         mark: true,
         mark2: false,
-        answer: 'answer5'
+        answer: 'answer5',
+        arrow: false
       },
       {
         id: 6,
         ask: 'ask6',
         mark: true,
         mark2: false,
-        answer: 'answer6'
+        answer: 'answer6',
+        arrow: false
       },
       {
         id: 7,
         ask: 'ask7',
         mark: true,
         mark2: false,
-        answer: 'answer7'
+        answer: 'answer7',
+        arrow: false
       },
       {
         id: 8,
         ask: 'ask8',
         mark: false,
         mark2: true,
-        answer: 'answer8'
+        answer: 'answer8',
+        arrow: false
       },
       {
         id: 9,
         ask: 'ask9',
         mark: false,
         mark2: true,
-        answer: 'answer9'
+        answer: 'answer9',
+        arrow: false
       },
       {
         id: 10,
         ask: 'ask10',
         mark: true,
         mark2: false,
-        answer: 'answer10'
+        answer: 'answer10',
+        arrow: false
       },
       {
         id: 11,
         ask: 'ask11',
         mark: false,
         mark2: false,
-        answer: 'answer11'
+        answer: 'answer11',
+        arrow: false
       },
       {
         id: 12,
         ask: 'ask12',
         mark: false,
         mark2: false,
-        answer: 'answer12'
+        answer: 'answer12',
+        arrow: false
       },
       {
         id: 13,
         ask: 'ask13',
         mark: false,
         mark2: false,
-        answer: 'answer13'
+        answer: 'answer13',
+        arrow: false
       }],
-      arrowstyle: ''
+      arrowstyle: 'transform: rotateZ(315deg);'
     }
   },
   methods: {
-    btnclick(e) {
+    btnclick(e, item) {
       const answer = e.currentTarget.nextElementSibling
-      const arrow = $(e.target).children(".arrow")
-      console.log(arrow);
-      if (this.isShow) {
+      if (item.arrow) {
         $(answer).slideUp(400)
       } else {
         $(answer).slideDown(400)
-        arrow.animate({
-          transform: 'rotate(315deg)'
-        })
       }
-      this.isShow = !this.isShow
+      item.arrow = !item.arrow
     }
   }
 };
@@ -180,13 +187,13 @@ export default {
 
   .box {
     font-family: PingFang SC;
-    padding-top: 93px;
+    padding-top: 20%;
     position: relative;
     z-index: 999;
 
     .title {
       font-size: 60px;
-      line-height: 100px;
+      line-height: 90px;
       font-weight: 800;
       color: #333333;
       width: 50%;
@@ -261,8 +268,8 @@ export default {
 
     .answer {
       border-top: 2px solid #EDEDED;
-      padding-top: 70px;
-      margin-top: 70px;
+      padding-top: 50px;
+      margin-top: 50px;
       display: none;
       overflow: hidden;
 
@@ -275,6 +282,41 @@ export default {
 
       span {
         color: #333333;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1599px) {
+  .section1 {
+    .box{
+      .title {
+      font-size: 50px !important;
+      line-height: 80px !important;
+    }
+    .txt{
+      font-size: 18px !important;
+      margin: 48px 0 70px !important;
+    }
+    >img{
+      width: 140px !important;
+      height: 100px !important;
+    }
+    }
+  }
+  .section2{
+    padding: 20px 0 140px !important;
+    .head{
+      .txt{
+        font-size: 30px !important;
+      }
+      .mark{
+        font-size: 16px !important;
+      }
+      .arrow{
+        width: 20px !important;
+        height: 20px !important;
       }
     }
   }

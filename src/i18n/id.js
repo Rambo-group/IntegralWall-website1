@@ -1,12 +1,12 @@
 export default {
   //印尼语
-  lang: "English",
+  lang: "id",
   //主页
   home: "halaman rumah",
   answer: "Pertanyaan dan jawaban",
   blog: "Blog",
   language: "Pilihan bahasa",
-  title: "Mission Go menghasilkan uang dengan mudah di ponsel Anda",
+  title: "menghasilkan uang dengan mudah di ponsel Anda",
   download: "unduh",
   module1_tit: "aplikasi penghasil uang",
   txt1: "Tentang Misi Go",

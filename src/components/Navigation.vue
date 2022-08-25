@@ -4,15 +4,11 @@
       <div class="logo"><img src="@assets/logo.png" alt=""><span>Mission Go</span></div>
       <ul class="menu">
         <li v-for="item in list" :key="item.id" @click="jumpTo(item.url, item.id)"
-          :class="{ active: active == item.id }">{{ item.name }}</li>
+          :class="{ active: active == item.id }">{{ $t(item.name) }}</li>
         <li class="dropdown" @click.stop="showNav($event)">
-          <span>语言选择</span>
+          <span>{{ $t('language') }}</span>
           <ul class="nav-menu" v-show="menuShow">
-            <li>英语</li>
-            <li>泰语</li>
-            <li>越南语</li>
-            <li>西班牙语</li>
-            <li>葡萄牙语</li>
+            <li v-for="item in Language" :key="item.id" v-Lang="item.lang">{{item.name}}</li>
           </ul>
         </li>
       </ul>
@@ -24,31 +20,30 @@
           <div class="col-3">
             <div class="contact">
               <img src="../assets/logo.png" alt="">
-              <div class="txt">快速关注我们的社交媒体账户</div>
-              <div class="txt">并获取更多信息。</div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="answer">
-              <div class="title">支持</div>
-              <div class="txt">问答</div>
-              <div class="txt">博客</div>
+              <div class="txt">{{ $t('bottom_txt1') }}</div>
             </div>
           </div>
           <div class="col-3">
-            <div class="title">联系我们</div>
+            <div class="answer">
+              <div class="title">{{ $t('bottom_txt2') }}</div>
+              <div class="txt">{{ $t('answer') }}</div>
+              <div class="txt">{{ $t('blog') }}</div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="title">{{ $t('bottom_txt3') }}</div>
             <div class="mail">
               <img src="../assets/mail.png" alt="">
               <span class="txt">MissionGo888@gmail.com</span>
             </div>
           </div>
           <div class="col-3">
-            <div class="title">跟着我们</div>
+            <div class="title">{{ $t('bottom_txt4') }}</div>
             <div class="follow">
-              <img src="../assets/facebook.png" alt="">
-              <img src="../assets/zalo.png" alt="">
-              <img src="../assets//telegram.png" alt="">
-              <img src="../assets/line.png" alt="">
+              <a href="https://www.facebook.com/MissionGoing"><img src="../assets/facebook.png" alt=""></a>
+              <a href="https://www.instagram.com/mission_going/"><img src="../assets/instagram.png" alt=""></a>
+              <a href="https://t.me/missiongoing"><img src="../assets//telegram.png" alt=""></a>
+              <a href="https://twitter.com/MissionGo"><img src="../assets/twitter.png" alt=""></a>
             </div>
           </div>
         </div>
@@ -62,20 +57,44 @@ export default {
     return {
       list: [{
         id: 1,
-        name: '主页',
+        name: 'home',
         url: '/'
       }, {
         id: 2,
-        name: '下载',
+        name: 'download',
         url: '/download'
       }, {
         id: 3,
-        name: '问答',
+        name: 'answer',
         url: '/blog'
       }, {
         id: 4,
-        name: '博客',
+        name: 'blog',
         url: '/question-answer'
+      }],
+      Language: [{
+        id: 1,
+        name: '英语',
+        lang: 'en'
+      },
+      {
+        id: 2,
+        name: '泰语',
+        lang: 'th'
+      },
+      {
+        id: 3,
+        name: '越南语',
+        lang: 'vi'
+      }, {
+        id: 4,
+        name: '西班牙语',
+        lang: 'es'
+      },
+      {
+        id: 5,
+        name: '葡萄牙语',
+        lang: 'pt'
       }],
       topClass: '',
       menuShow: false,
@@ -91,7 +110,7 @@ export default {
     //语言选择展示隐藏
     showNav(e) {
       this.menuShow = !this.menuShow
-      console.log(e.target);
+      console.log(e.currentTarget.firstElementChild);
     },
     activeClass() {
       let path = this.$route.path
@@ -119,7 +138,7 @@ export default {
 <style lang="less" scoped>
 #header {
   position: sticky;
-  z-index: 999;
+  z-index: 9999;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -151,7 +170,7 @@ export default {
     .fa(center);
 
     >li {
-      margin: 0 40px;
+      margin: 0 20px;
       font-size: 18px;
       font-family: PingFang SC;
       font-weight: bold;
@@ -204,7 +223,7 @@ export default {
         border-style: solid;
         top: 50%;
         position: absolute;
-        left: 120%;
+        left: 112%;
         transform: translate(-50%, -25%);
         background: transparent !important;
       }
@@ -213,13 +232,14 @@ export default {
         position: absolute;
         top: 40px;
         left: 0;
+        min-width: 124px;
         background: #fff;
         box-shadow: 0px 6px 12px 1px rgba(24, 39, 75, 0.04), 0px 8px 24px rgba(24, 39, 75, 0.05);
 
         >li {
           padding: 10px;
           line-height: 22px !important;
-          font-size: 12px;
+          font-size: 14px;
           font-weight: bold;
           color: #666666;
           text-align: center;
@@ -273,10 +293,6 @@ export default {
     }
   }
 
-  .answer {
-    text-align: center
-  }
-
   .mail {
     .fa(center);
 
@@ -290,7 +306,7 @@ export default {
   .follow {
     .fa(center);
 
-    >img {
+    a>img {
       width: 48px;
       height: 48px;
       margin-right: 28px;

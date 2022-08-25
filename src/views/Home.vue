@@ -6,9 +6,9 @@
           <div><img src="../assets/logo.png" alt=""></div>
           <div class="title">
             <div>Mission Go</div>
-            <div>让你在手机上轻松赚钱</div>
+            <div>{{ $t('title') }}</div>
           </div>
-          <div class="btn">下载</div>
+          <div class="btn">{{ $t('download') }}</div>
         </div>
         <div class="accessories"></div>
         <div class="left">
@@ -17,20 +17,19 @@
       </div>
     </section>
     <section class="section2" id="section2">
-      <div class="title">赚钱应用程序</div>
+      <div class="title">{{ $t('module1_tit') }}</div>
       <div class="content">
         <div class="left" id="section2_left"></div>
         <div class="right" id="section2_right">
-          <div class="text">关于Mission Go</div>
+          <div class="text">{{ $t('txt1') }}</div>
           <div class="about">
-            <div class="txt">Mission Go是一个轻松赚钱的应用程序，你可以通过完成简单的任务来获取金币兑换现金奖励。</div>
-            <div class="txt">现在下载这款火爆的应用程序，让手机赚钱变得更容易！</div>
-            <div class="tit">怎么玩</div>
-            <div class="txt">1. 可去谷歌应用商店和Apkpure应用商店下载Mission Go应用程序</div>
-            <div class="txt">2. 使用您的手机号码、Facebook账户、谷歌账户登录</div>
-            <div class="txt">3. 完成你喜欢的任务并获得金币</div>
-            <div class="txt">4. 收集到的金币去兑换现金</div>
-            <div class="btn">下载</div>
+            <div class="txt">{{ $t('txt2') }}</div>
+            <div class="tit">{{ $t('txt3') }}</div>
+            <div class="txt">{{ $t('txt4') }}</div>
+            <div class="txt">{{ $t('txt5') }}</div>
+            <div class="txt">{{ $t('txt6') }}</div>
+            <div class="txt">{{ $t('txt7') }}</div>
+            <div class="btn">{{ $t('download') }}</div>
           </div>
           <div class="p1"><img src="../assets/gold.png" alt=""></div>
           <div class="p2"><img src="../assets/gold.png" alt=""></div>
@@ -43,9 +42,8 @@
       <div class="left" id="section3_left">
         <div class="box">
           <div><img src="../assets/logo.png" alt=""></div>
-          <div class="title">在Mission
-            Go这个赚钱的应用中，有成百上千种有趣任务其中定有一种适合你。别担心不能顺利完成，只要根据任务指南来操作就能获得金币，然后用收集到的金币去兑换现金简单便捷。Mission Go 玩法多多，赚钱多多！</div>
-          <div class="btn">下载</div>
+          <div class="title">{{ $t('module2') }}</div>
+          <div class="btn">{{ $t('download') }}</div>
         </div>
         <div class="p1"><img src="../assets/gold.png" alt=""></div>
         <div class="accessories"></div>
@@ -59,11 +57,9 @@
           <div class="right-nav">
             <div><img src="../assets/logo.png" alt=""></div>
             <div class="title">
-              <div>7天签到并完成任务可以获得海量金币来兑换高额现金</div>
-              <div>Mission Go赚钱应用程序是目前流行的应用程序</div>
-              <div>即能赚钱又可消遣无聊的生活。</div>
+              <div>{{ $t('module3') }}</div>
             </div>
-            <div class="btn">下载</div>
+            <div class="btn">{{ $t('download') }}</div>
           </div>
           <div class="p1"><img src="../assets/gold.png" alt=""></div>
           <div class="p2"><img src="../assets/gold.png" alt=""></div>
@@ -76,13 +72,8 @@
       <div class="left" id="section5_left">
         <div class="left-nav">
           <div><img src="../assets/logo.png" alt=""></div>
-          <div class="title">Mission Go是目前最快且经过验证的赚钱应用程序之一
-            如果你想要快速获得更多金币？邀请你的朋友加入是
-            个不错的选择。只要你的朋友完成任务，就可以获得
-            不错的金币奖励。你邀请的朋友越多，获得的奖励
-            就越多！来吧，快邀请你的朋友一起下载，一起玩
-            一起快乐赚钱！</div>
-          <div class="btn">下载</div>
+          <div class="title">{{ $t('module4') }}</div>
+          <div class="btn">{{ $t('download') }}</div>
         </div>
         <div class="accessories"></div>
         <div class="p1"><img src="../assets/gold.png" alt=""></div>
@@ -95,12 +86,9 @@
         <div class="right-nav">
           <div><img src="../assets/logo.png" alt=""></div>
           <div class="title">
-            <div>Mission Go是 2022年最简单的赚钱应用程序之一</div>
-            <div>简单做做任务收集到的金币可以兑换现金。</div>
-            <div>金币越多你可以兑换的现金就越多！</div>
-            <div>快下载去赚金币吧！</div>
+            <div>{{ $t('module5') }}</div>
           </div>
-          <div class="btn">下载</div>
+          <div class="btn">{{ $t('download') }}</div>
         </div>
         <div class="p1"><img src="../assets/gold.png" alt=""></div>
         <div class="p2"><img src="../assets/gold.png" alt=""></div>
@@ -131,7 +119,7 @@ export default {
       let selectorTop = $(selector).offset().top;
       if (winScrolled + winTop > selectorTop - 10) {
         let selector_left = selector + "_left"
-        let selector_right = selector+"_right"
+        let selector_right = selector + "_right"
         $(selector_left).css("animation", "leftShow 1.5s forwards")
         $(selector_right).css("animation", "rightShow 1.5s forwards")
       }
@@ -155,6 +143,7 @@ export default {
     .box {
       font-family: PingFang SC;
       padding-top: 225px;
+      animation: txtShow 4s;
 
       img {
         width: 100px;
@@ -167,6 +156,7 @@ export default {
         color: #333333;
         margin: 48px 0 64px;
         line-height: 100px;
+        width: 60%;
       }
 
       .btn {
@@ -210,6 +200,29 @@ export default {
       position: absolute;
       top: 3%;
       right: 0;
+      animation: topShow 3s;
+    }
+
+    @keyframes topShow {
+      0% {
+        transform: translateY(-300px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
+    @keyframes txtShow {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
   }
 
@@ -251,6 +264,7 @@ export default {
 
         .about {
           padding: 149px 18px;
+          width: 80%;
 
           .txt {
             font-size: 20px;
@@ -437,6 +451,7 @@ export default {
             font-weight: bold;
             color: #333333;
             margin: 68px 60px 68px 0;
+            width: 80%;
 
             >div {
               font-size: 28px;

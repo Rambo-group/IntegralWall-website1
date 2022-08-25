@@ -3,11 +3,10 @@
     <section class="section1">
       <div class="containers">
         <div class="box">
-          <div class="title">如何从 Mission Go
-            中赚钱</div>
+          <div class="title">{{ $t('module8_tit') }}</div>
           <div class="txt">
-            <div>有什么问题？</div>
-            <div>在这里你都可以找到答案</div>
+            <div>{{ $t('txt11') }}</div>
+            <div>{{ $t('txt12') }}</div>
           </div>
           <img src="../assets/search.png" alt="">
         </div>
@@ -17,17 +16,15 @@
     </section>
     <section class="section2">
       <div class="containers">
-        <div class="centent">
+        <div class="centent" v-for="item in list" :key="item.id">
           <div class="head" @click="btnclick($event)">
-            <div class="txt"> 问：如何从 Mission Go apk 中赚钱？</div>
-            <div class="mark">NEW</div>
-            <div class="arrow"></div>
+            <div class="txt">{{ $t(item.ask) }}</div>
+            <div class="mark" v-show="item.mark">NEW</div>
+            <div class="mark mark1" v-show="item.mark2">HOT</div>
+            <div class="arrow" :style="arrowstyle"></div>
           </div>
           <div class="answer">
-            <div><span>A:</span>因为使用的应用程序版本太旧。每日签到任务已经上线，只能下载最新的apk资源包。</div>
-            <div><span>如何更新:</span></div>
-            <div>1.查看您的帐户是否与您的号码绑定！</div>
-            <div>2.可前往Mission Go官网上下载最新的App。祝更新成功</div>
+            <div>{{ $t(item.answer) }}</div>
           </div>
         </div>
       </div>
@@ -39,18 +36,114 @@ export default {
   data() {
     return {
       isShow: true,
-
+      list: [{
+        id: 1,
+        ask: 'ask1',
+        mark: true,
+        mark2: false,
+        answer: 'answer1'
+      },
+      {
+        id: 2,
+        ask: 'ask2',
+        mark: true,
+        mark2: false,
+        answer: 'answer2'
+      },
+      {
+        id: 3,
+        ask: 'ask3',
+        mark: false,
+        mark2: false,
+        answer: 'answer3'
+      },
+      {
+        id: 4,
+        ask: 'ask4',
+        mark: false,
+        mark2: false,
+        answer: 'answer4'
+      },
+      {
+        id: 5,
+        ask: 'ask5',
+        mark: true,
+        mark2: false,
+        answer: 'answer5'
+      },
+      {
+        id: 6,
+        ask: 'ask6',
+        mark: true,
+        mark2: false,
+        answer: 'answer6'
+      },
+      {
+        id: 7,
+        ask: 'ask7',
+        mark: true,
+        mark2: false,
+        answer: 'answer7'
+      },
+      {
+        id: 8,
+        ask: 'ask8',
+        mark: false,
+        mark2: true,
+        answer: 'answer8'
+      },
+      {
+        id: 9,
+        ask: 'ask9',
+        mark: false,
+        mark2: true,
+        answer: 'answer9'
+      },
+      {
+        id: 10,
+        ask: 'ask10',
+        mark: true,
+        mark2: false,
+        answer: 'answer10'
+      },
+      {
+        id: 11,
+        ask: 'ask11',
+        mark: false,
+        mark2: false,
+        answer: 'answer11'
+      },
+      {
+        id: 12,
+        ask: 'ask12',
+        mark: false,
+        mark2: false,
+        answer: 'answer12'
+      },
+      {
+        id: 13,
+        ask: 'ask13',
+        mark: false,
+        mark2: false,
+        answer: 'answer13'
+      }],
+      arrowstyle: ''
     }
   },
   methods: {
     btnclick(e) {
       const answer = e.currentTarget.nextElementSibling
+      const arrow = $(e.target).children(".arrow")
+      console.log(arrow);
       if (this.isShow) {
         $(answer).slideUp(400)
       } else {
         $(answer).slideDown(400)
+        arrow.animate({
+          transform: 'rotate(315deg)'
+        })
       }
-     this.isShow = !this.isShow
+      this.isShow = !this.isShow
     }
   }
 };
@@ -70,6 +163,7 @@ export default {
     position: absolute;
     top: 3%;
     left: 0;
+    z-index: 1;
   }
 
   .right {
@@ -81,18 +175,21 @@ export default {
     position: absolute;
     top: -15%;
     right: 0;
+    z-index: 1;
   }
 
   .box {
     font-family: PingFang SC;
     padding-top: 93px;
+    position: relative;
+    z-index: 999;
 
     .title {
       font-size: 60px;
       line-height: 100px;
       font-weight: 800;
       color: #333333;
-      width: 524px;
+      width: 50%;
     }
 
     .txt {
@@ -117,16 +214,19 @@ export default {
     background: #FFFFFF;
     box-shadow: 0px 8px 36px 2px rgba(0, 0, 0, 0.05);
     border-radius: 16px;
-    padding: 90px 100px;
+    padding: 50px 90px;
+    margin: 34px 0;
 
     .head {
       cursor: pointer;
-      .fa(center);
+      .fa(flex-start);
+      position: relative;
 
       .txt {
         font-size: 40px;
         font-weight: 800;
         color: #333333;
+        width: 70%;
       }
 
       .mark {
@@ -137,24 +237,25 @@ export default {
         font-weight: bold;
         border-radius: 20px 20px 20px 0;
         margin-left: 36px;
+        margin-top: 6px;
+      }
+
+      .mark1 {
+        background-color: #fc5033 !important;
       }
 
       .arrow {
-        position: relative;
-      }
-
-      .arrow::after {
-        content: "";
         height: 25px;
         width: 25px;
-        top: -12px;
-        right: -165px;
+        top: 40%;
+        right: 0px;
         border-width: 3px 3px 0 0;
         border-color: #666666;
         border-style: solid;
         transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
         position: absolute;
         transform: translate(-25%, -25%) rotate(135deg);
+        transition: all .2s;
       }
     }
 

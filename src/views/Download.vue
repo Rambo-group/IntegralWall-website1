@@ -3,10 +3,10 @@
     <section class="section1">
       <div class="containers">
         <div class="box">
-          <div class="title">一款能赚钱的apk</div>
-          <div class="title">在手机上轻松赚钱</div>
-          <div class="txt">下载2022年最好的赚钱应用程序</div>
-          <div class="btn">下载</div>
+          <div class="title">{{ $t('module6_tit1') }}</div>
+          <div class="title">{{ $t('module6_tit2') }}</div>
+          <div class="txt">{{ $t('txt8') }}</div>
+          <div class="btn">{{ $t('download') }}</div>
         </div>
         <div class="left"></div>
         <div class="right"></div>
@@ -14,18 +14,18 @@
     </section>
     <section class="section2">
       <div class="containers">
-        <div class="title">Mission Go还可以这样下载</div>
+        <div class="title">{{ $t('txt9') }}</div>
         <div class="box">
           <div>
             <img src="../assets/google_store.png" alt="">
-            <div class="tit">谷歌商店</div>
-            <div class="txt">在 Google Play 应用商店搜索“ Mission Go </div>
-            <div class="btn btn1">下载</div>
+            <div class="tit">{{ $t('google') }}</div>
+            <div class="txt">{{ $t('txt10') }}</div>
+            <div class="btn btn1">{{ $t('download') }}</div>
           </div>
           <div>
             <img src="../assets/apkpure.png" alt="">
-            <div class="tit">Apkpure应用商店</div>
-            <div class="btn btn2">下载</div>
+            <div class="tit">{{ $t('apkpure') }}</div>
+            <div class="btn btn2">{{ $t('download') }}</div>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ export default {
   }
 
   .right {
-    width: 62%;
+    width: 60%;
     height: 75%;
     margin-top: 66px;
     background: url(../assets/bg3.png) no-repeat;
@@ -69,11 +69,15 @@ export default {
     position: absolute;
     top: 3%;
     right: 0;
+    z-index: 1;
   }
 
   .box {
     font-family: PingFang SC;
     padding-top: 49px;
+    z-index: 99;
+    width: 45%;
+    position: relative;
 
     .title {
       font-size: 60px;
@@ -112,6 +116,7 @@ export default {
     >div {
       .fa(center);
       flex-direction: column;
+
       img {
         width: 340px;
         height: 340px;
@@ -131,10 +136,12 @@ export default {
         margin-top: 26px;
         color: #999999;
       }
-      .btn1{
+
+      .btn1 {
         margin-top: 68px;
       }
-      .btn2{
+
+      .btn2 {
         margin-top: 124px;
       }
     }

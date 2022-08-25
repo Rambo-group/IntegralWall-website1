@@ -12,13 +12,12 @@
     </section>
     <section class="section2">
       <div class="containers">
-        <div class="title">Mission Go任务论坛</div>
+        <div class="title">{{ $t("module7_tit1") }}</div>
         <div class="box">
           <div class="box-item">
             <div class="top">
               <div>
-                <div class="tit">最新任务</div>
-                <div class="txt">主题：136</div>
+                <div class="tit">{{ $t("task1") }}</div>
               </div>
               <img src="../assets/newest.png" alt="">
             </div>
@@ -44,8 +43,7 @@
           <div class="box-item">
             <div class="top">
               <div>
-                <div class="tit">官方任务</div>
-                <div class="txt">主题：136</div>
+                <div class="tit">{{ $t("task2") }}</div>
               </div>
               <img src="../assets/official.png" alt="">
             </div>
@@ -71,8 +69,7 @@
           <div class="box-item">
             <div class="top">
               <div>
-                <div class="tit">最新任务</div>
-                <div class="txt">主题：136</div>
+                <div class="tit">{{ $t("task3") }}</div>
               </div>
               <img src="../assets/video.png" alt="">
             </div>
@@ -98,8 +95,7 @@
           <div class="box-item">
             <div class="top">
               <div>
-                <div class="tit">最新任务</div>
-                <div class="txt">主题：136</div>
+                <div class="tit">{{ $t("task4") }}</div>
               </div>
               <img src="../assets/popular.png" alt="">
             </div>
@@ -174,10 +170,10 @@ export default {
       border-radius: 16px;
 
       .top {
-        padding: 30px 0 0 30px;
+        padding: 8px 0 0 30px;
         background: #5F16D9;
         border-radius: 16px 16px 0px 0px;
-        .fj(space-between);
+        .flex(space-between,center);
 
         .tit {
           font-size: 28px;

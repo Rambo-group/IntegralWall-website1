@@ -113,6 +113,11 @@ export default {
     showNav() {
       this.menuShow = !this.menuShow
     },
+    ToShowNav() {
+      if (this.menuShow) {
+        this.menuShow = !this.menuShow
+      }
+    },
     activeClass() {
       let path = this.$route.path
       this.list.forEach((item) => {
@@ -122,7 +127,11 @@ export default {
       })
     },
   },
+  beforeDestroy() { // 在页面注销前，删除点击事件
+    document.removeEventListener("click", this.ToShowNav);
+  },
   mounted() {
+    document.addEventListener("click", this.ToShowNav)
     this.activeClass()
     //滚动top栏浮动
     document.onscroll = () => {

@@ -28,21 +28,22 @@ const routes = [
         path: "/question-answer",
         name: "question-answer",
         component: () => import("./views/question-answer.vue"),
-      }
+      },
     ],
   },
 ];
 
 const router = new VueRouter({
   routes,
-  mode: 'history',
+  mode: "history",
+  base: '/dist',
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else {
       return { x: 0, y: 0 };
     }
-  }
+  },
 });
 
 export default router;

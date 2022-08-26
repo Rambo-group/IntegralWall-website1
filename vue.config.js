@@ -36,7 +36,7 @@ module.exports = {
     );
   },
 
-  publicPath: "./",
+  publicPath: "/",
   assetsDir: "assets",
   outputDir: "dist",
   lintOnSave: false,

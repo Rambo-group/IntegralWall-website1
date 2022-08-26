@@ -187,7 +187,7 @@ export default {
 
   .box {
     font-family: PingFang SC;
-    padding-top: 20%;
+    padding-top: 8%;
     position: relative;
     z-index: 999;
 
@@ -290,31 +290,37 @@ export default {
 
 @media screen and (max-width: 1599px) {
   .section1 {
-    .box{
+    .box {
       .title {
-      font-size: 50px !important;
-      line-height: 80px !important;
-    }
-    .txt{
-      font-size: 18px !important;
-      margin: 48px 0 70px !important;
-    }
-    >img{
-      width: 140px !important;
-      height: 100px !important;
-    }
+        font-size: 50px !important;
+        line-height: 80px !important;
+      }
+
+      .txt {
+        font-size: 18px !important;
+        margin: 48px 0 70px !important;
+      }
+
+      >img {
+        width: 140px !important;
+        height: 100px !important;
+      }
     }
   }
-  .section2{
+
+  .section2 {
     padding: 20px 0 140px !important;
-    .head{
-      .txt{
+
+    .head {
+      .txt {
         font-size: 30px !important;
       }
-      .mark{
+
+      .mark {
         font-size: 16px !important;
       }
-      .arrow{
+
+      .arrow {
         width: 20px !important;
         height: 20px !important;
       }

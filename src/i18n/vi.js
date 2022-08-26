@@ -39,10 +39,45 @@ export default {
   apkpure: "Cửa hàng ứng dụng Apkpure",
   //博客
   module7_tit1: "Diễn đàn nhiệm vụ Mission Go",
+  publicity_txt1:'Có phần thưởng cho lời mời Mission Go và tiền vàng tiếp tục tích lũy!',
+  publicity_txt2:"Sự kiện mời mới của Mission Go đã bắt đầu!",
+  publicity_txt3:'Nhiệm vụ Hãy đăng nhập để chia sẻ và gửi tiền vàng, hãy đến và tham gia!',
   task1: "Nhiệm vụ mới nhất",
   task2: "Sự kiện chính thức",
   task3: "Nhiệm vụ video",
   task4: "Nhiệm vụ hot",
+  task1_txt1:
+    "Nhiệm vụ Đi đăng nhập để giành tiền vàng sắp đến, bạn đã đăng ký hôm nay chưa?",
+  task1_txt2:
+    "Có phần thưởng cho lời mời Mission Go, tiền vàng liên tục được thu thập và có nhiều điều bất ngờ!",
+  task1_txt3:
+    "Hãy đến với Mission Go để chơi game và kiếm tiền dễ dàng, cùng những đồng tiền vàng khủng đang chờ bạn!",
+  task1_txt4:
+    "Lợi ích dành cho người mới đã được chuyển giao, hãy tải xuống APP phổ biến để nhận tiền vàng nhiệm vụ độc quyền!",
+  task2_txt1:
+    "Nhiệm vụ Mission Go phổ biến sắp ra mắt, hãy tải xuống APP để kiếm tiền!",
+  task2_txt2:
+    "Mission Go rất phổ biến với người hâm mộ, nhiệm vụ demo APP đã được phát hành và bạn có thể nhận được rất nhiều tiền vàng!",
+  task2_txt3:
+    "Tiệc trò chơi xem qua, thủ thuật khuếch đại nhiệm vụ mới của Mission Go, hãy thử trò chơi để nhận tiền vàng!",
+  task2_txt4:
+    "Nhiệm vụ kiếm bảng câu hỏi đã được cập nhật, siêu đơn giản và siêu dễ dàng, hãy vào Mission Go để hoàn thành nó!",
+  task3_txt1:
+    "Quyền lợi của Mission Go là đây, hãy đến phòng truyền hình trực tiếp người nổi tiếng của TT Internet để mang đồ về nhà miễn phí!",
+  task3_txt2:
+    "Hãy đến với Mission Go để xem video và đổi tiền vàng thành tiền mặt! Kiếm tiền chỉ đơn giản vậy thôi!",
+  task3_txt3:
+    "Nhiệm vụ video Mission Go sắp đến, rất nhiều tiền vàng và phần thưởng, hãy tải xuống và tham gia!",
+  task3_txt4:
+    "Các nhiệm vụ phúc lợi, xem video mỗi ngày để dễ dàng nhận được tiền vàng, hãy đến và tham gia!",
+  task4_txt1:
+    "Sự kiện mời mới của Mission Go đã bắt đầu! Điểm thưởng siêu phong phú đang chờ bạn!",
+  task4_txt2:
+    "Mission Go có sự kiện mới ~ Đăng nhập và chia sẻ để nhận tiền vàng, hãy đến và tham gia!",
+  task4_txt3:
+    "Mission Go đã ra mắt sự kiện mời bạn bè để giành tiền vàng. Hãy đến và mời bạn bè để giúp bạn lập danh sách và giành được những giải thưởng lớn!",
+  task4_txt4:
+    "Cuộc thi Video Sáng tạo Truyền thông Xã hội Mission Go đã bắt đầu và những người tham gia có thể giành được tới 5.000 xu!",
   //问答
   module8_tit: "Cách kiếm tiền từ Mission Go",
   txt11: "nếu có bất kỳ vấn đề?",
@@ -54,7 +89,8 @@ export default {
   answer2:
     "A: Do phiên bản của ứng dụng được sử dụng đã quá cũ. Nhiệm vụ đăng ký hàng ngày đã được khởi chạy và chỉ có thể tải xuống gói tài nguyên apk mới nhất. Cách cập nhật: 1. Kiểm tra xem tài khoản của bạn có được gắn với số của bạn không! 2. Bạn có thể truy cập trang web chính thức của Mission Go để tải xuống gói tài nguyên Apk mới nhất. Chúc may mắn với bản cập nhật!",
   ask3: "Hỏi: Tôi có thể tạo nhiều tài khoản trên một điện thoại không?",
-  answer3: "A: Không, nếu phát hiện có bất kỳ gian lận nào, tài khoản của bạn sẽ bị đóng băng.",
+  answer3:
+    "A: Không, nếu phát hiện có bất kỳ gian lận nào, tài khoản của bạn sẽ bị đóng băng.",
   ask4: "Q: Ứng dụng kiếm tiền nhanh nhất năm 2022 là gì?",
   answer4:
     'A: Mission Go là ứng dụng kiếm tiền nhanh nhất và dễ nhất vào năm 2022! Bạn có thể tải xuống thông qua các liên kết được chia sẻ trên mạng xã hội hoặc có thể tải xuống qua Cửa hàng Google Play, cửa hàng ứng dụng Apkpure và tìm kiếm Mission Go "", vì vậy bạn có thể nhận được rất nhiều tiền vàng để đổi thành tiền mặt khi làm nhiệm vụ. trên điện thoại của bạn, kiếm tiền thật tuyệt! ',

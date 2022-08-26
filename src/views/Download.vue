@@ -74,7 +74,7 @@ export default {
 
   .box {
     font-family: PingFang SC;
-    padding-top: 16%;
+    padding-top: 4%;
     z-index: 99;
     width: 45%;
     position: relative;
@@ -166,6 +166,8 @@ export default {
   }
 
   .btn {
+    height: 76px !important;
+    line-height: 76px !important;
     font-size: 30px !important;
     padding: 0 90px !important;
   }

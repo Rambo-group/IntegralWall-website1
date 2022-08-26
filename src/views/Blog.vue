@@ -2,11 +2,17 @@
   <div class="blog">
     <section class="section1">
       <div class="containers">
-        <div class="banner">banner</div>
+        <div class="banner"></div>
         <div class="box">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
+          <div><img src="../assets/publicity1.png" alt="">
+            <div class="txt">{{$t("publicity_txt1")}}</div>
+          </div>
+          <div><img src="../assets/publicity2.png" alt="">
+            <div class="txt">{{$t("publicity_txt2")}}</div>
+          </div>
+          <div><img src="../assets/publicity3.png" alt="">
+            <div class="txt">{{$t("publicity_txt3")}}</div>
+          </div>
         </div>
       </div>
     </section>
@@ -14,107 +20,17 @@
       <div class="containers">
         <div class="title">{{ $t("module7_tit1") }}</div>
         <div class="box">
-          <div class="box-item">
+          <div class="box-item" v-for="item in list" :key="item.id">
             <div class="top">
               <div>
-                <div class="tit">{{ $t("task1") }}</div>
+                <div class="tit">{{ $t(item.task) }}</div>
               </div>
-              <img src="../assets/newest.png" alt="">
+              <img :src="item.img" alt="">
             </div>
             <div class="centent">
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-            </div>
-          </div>
-          <div class="box-item">
-            <div class="top">
-              <div>
-                <div class="tit">{{ $t("task2") }}</div>
-              </div>
-              <img src="../assets/official.png" alt="">
-            </div>
-            <div class="centent">
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-            </div>
-          </div>
-          <div class="box-item">
-            <div class="top">
-              <div>
-                <div class="tit">{{ $t("task3") }}</div>
-              </div>
-              <img src="../assets/video.png" alt="">
-            </div>
-            <div class="centent">
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-            </div>
-          </div>
-          <div class="box-item">
-            <div class="top">
-              <div>
-                <div class="tit">{{ $t("task4") }}</div>
-              </div>
-              <img src="../assets/popular.png" alt="">
-            </div>
-            <div class="centent">
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
-              </div>
-              <div class="centent-item">
-                <div class="tit">复制邀请码邀请好友积分下载Mission Go获得大量</div>
-                <div class="txt">08-08 10:43</div>
+              <div class="centent-item" v-for="(items, index) in item.second" :key="index">
+                <div class="tit">{{ $t(items.name) }}</div>
+                <div class="txt">{{ time }}</div>
               </div>
             </div>
           </div>
@@ -124,11 +40,96 @@
   </div>
 </template>
 <script>
+
 export default {
   data() {
     return {
+      list: [
+        {
+          id: 1,
+          task: 'task1',
+          img: require('../assets/newest.png'),
+          second: [{
+            name: 'task1_txt1'
+          }, {
+            name: 'task1_txt2'
+          }, {
+            name: 'task1_txt3'
+          }, {
+            name: 'task1_txt4'
+          }],
+
+        }, {
+          id: 2,
+          task: 'task2',
+          img: require('../assets/official.png'),
+          second: [
+            {
+              name: 'task2_txt1'
+            }, {
+              name: 'task2_txt2'
+            }, {
+              name: 'task2_txt3'
+            }, {
+              name: 'task2_txt4'
+            }
+          ]
+        }, {
+          id: 3,
+          task: 'task3',
+          img: require('../assets/video.png'),
+          second: [{
+            name: 'task3_txt1'
+          }, {
+            name: 'task3_txt2'
+          }, {
+            name: 'task3_txt3',
+            time: ''
+          }, {
+            name: 'task3_txt4'
+          }]
+        }, {
+          id: 4,
+          task: 'task4',
+          img: require('../assets/popular.png'),
+          second: [{
+            name: 'task4_txt1'
+          }, {
+            name: 'task4_txt2'
+          }, {
+            name: 'task4_txt3'
+          }, {
+            name: 'task4_txt4'
+          }]
+        }
+      ],
+      time: ''
     }
   },
+  mounted() {
+    this.time = this.getNowDate()
+  },
+  methods: {
+    //获取当前日期时间
+    getNowDate() {
+      const nowDate = new Date();
+      const date = {
+        year: nowDate.getFullYear(),
+        month: nowDate.getMonth() + 1,
+        date: nowDate.getDate(),
+        hours: nowDate.getHours(),
+        minutes: nowDate.getMinutes(),
+        seconds: nowDate.getSeconds(),
+      };
+      const newmonth = date.month > 10 ? date.month : "0" + date.month;
+      const newday = date.date > 10 ? date.date : "0" + date.date;
+      const newminutes = date.minutes > 10 ? date.minutes : "0" + date.minutes;
+      // const newseconds = date.seconds > 10 ? date.seconds : "0" + date.seconds;
+
+      this.dateTime = newmonth + "-" + newday + " " + date.hours + ":" + newminutes;
+      return this.dateTime
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -137,20 +138,37 @@ export default {
   height: 1080px;
 
   .banner {
+    margin-top: 32px;
     height: 500px;
+    background: url(../assets/blog_banner.png) no-repeat;
+    background-size: cover;
   }
 
   .box {
-    .fa(center);
+    .fj(space-between);
+    margin-top: 36px;
 
     >div {
-      flex: 1;
+        width: 366px;
+
+      >img {
+        width: 100%;
+        height: 200px;
+      }
+
+      .txt {
+        margin-top: 26px;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: bold;
+        color: #666666;
+      }
     }
   }
 }
 
 .section2 {
-  padding: 200px 0;
+  padding: 100px 0;
 
   .title {
     font-size: 40px;
@@ -173,7 +191,7 @@ export default {
         padding: 8px 0 0 30px;
         background: #5F16D9;
         border-radius: 16px 16px 0px 0px;
-        .flex(space-between,center);
+        .flex(space-between, center);
 
         .tit {
           font-size: 28px;
@@ -214,5 +232,9 @@ export default {
       }
     }
   }
+}
+
+.containers {
+  padding: 0;
 }
 </style>

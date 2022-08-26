@@ -64,7 +64,7 @@
           <div class="p1"><img src="../assets/gold.png" alt=""></div>
           <div class="p2"><img src="../assets/gold.png" alt=""></div>
           <div class="p3"><img src="../assets/side.png" alt=""></div>
-          <div class="p4"><img src="../assets/accessories.png" alt=""></div>
+          <div class="p4"></div>
         </div>
       </div>
     </section>
@@ -93,7 +93,7 @@
         <div class="p1"><img src="../assets/gold.png" alt=""></div>
         <div class="p2"><img src="../assets/gold.png" alt=""></div>
         <div class="p3"><img src="../assets/side.png" alt=""></div>
-        <div class="p4"><img src="../assets/accessories.png" alt=""></div>
+        <div class="p4"></div>
       </div>
     </section>
   </div>
@@ -121,8 +121,8 @@ export default {
         if (winScrolled + winTop > selectorTop - 10) {
           let selector_left = selector + "_left"
           let selector_right = selector + "_right"
-          $(selector_left).css("animation", "leftShow 1.5s forwards")
-          $(selector_right).css("animation", "rightShow 1.5s forwards")
+          $(selector_left).css("animation", "leftShow 2s forwards")
+          $(selector_right).css("animation", "rightShow 2s forwards")
         }
       } catch (e) {
         // console.log("");
@@ -146,7 +146,7 @@ export default {
 
     .box {
       font-family: PingFang SC;
-      padding-top: 22%;
+      padding-top: 18%;
       animation: txtShow 4s;
       position: relative;
       z-index: 99;
@@ -257,6 +257,7 @@ export default {
 
       .right {
         width: 60%;
+        height: 900px;
         padding: 19px 50px;
         font-family: PingFang SC;
         position: relative;
@@ -335,7 +336,7 @@ export default {
           position: absolute;
           bottom: 0px;
           left: 50%;
-          width: 361px;
+          width: 30%;
           height: 82px;
           background: url(../assets/accessories.png) no-repeat;
           background-size: contain;
@@ -400,16 +401,14 @@ export default {
 
       .accessories {
         height: 82px;
-        width: 25%;
+        width: 30%;
         background: url(../assets/accessories.png) no-repeat;
         background-size: contain;
         position: absolute;
         bottom: -3%;
-        left: 10%;
+        left: 14%;
       }
     }
-
-
 
     .right {
       width: 40%;
@@ -417,7 +416,7 @@ export default {
       background: url(../assets/phone2.png) no-repeat;
       background-size: contain;
       position: absolute;
-      top: 3%;
+      top: 8%;
       right: 0;
     }
   }
@@ -432,11 +431,11 @@ export default {
       height: 100%;
 
       .left {
-        margin-top: 157px;
+        margin-top: 10%;
         width: 40%;
         height: 100%;
         background: url(../assets/phone3.png) no-repeat;
-        background-size: 100% 80%;
+        background-size: contain;
       }
 
       .right {
@@ -514,11 +513,10 @@ export default {
           position: absolute;
           bottom: 0px;
           left: 50%;
-
-          >img {
-            width: 361px;
-            height: 82px;
-          }
+          width: 30%;
+          height: 82px;
+          background: url(../assets/accessories.png) no-repeat;
+          background-size: contain;
         }
       }
     }
@@ -569,7 +567,7 @@ export default {
 
       .accessories {
         height: 82px;
-        width: 361px;
+        width: 30%;
         background: url(../assets/accessories.png) no-repeat;
         background-size: contain;
         position: absolute;
@@ -595,7 +593,7 @@ export default {
       background: url(../assets/phone4.png) no-repeat;
       background-size: contain;
       position: absolute;
-      top: 3%;
+      top: 8%;
       right: 0;
     }
   }
@@ -691,11 +689,10 @@ export default {
         position: absolute;
         bottom: 0px;
         left: 50%;
-
-        >img {
-          width: 361px;
-          height: 82px;
-        }
+        width: 30%;
+        height: 82px;
+        background: url(../assets/accessories.png) no-repeat;
+        background-size: contain;
       }
     }
 
@@ -719,12 +716,134 @@ export default {
         line-height: 80px !important;
         margin: 32px 0 42px !important;
       }
+    }
+  }
 
-      .btn {
-        font-size: 30px !important;
-        padding: 0 90px !important;
+  .section2 {
+    padding-top: 50px !important;
+
+    .title {
+      font-size: 50px !important;
+    }
+
+    .right {
+      .text {
+        font-size: 25px !important;
+      }
+
+      .about {
+        padding: 100px 15px !important;
+
+        .txt {
+          font-size: 18px !important;
+          line-height: 32px !important;
+        }
+
+        .tit {
+          font-size: 22px !important;
+          margin: 28px 0 18px !important;
+        }
       }
     }
+  }
+
+  .section3 {
+    margin-top: 150px !important;
+    height: 900px !important;
+
+    .box {
+      img {
+        width: 70px !important;
+        height: 70px !important;
+      }
+
+      .title {
+        font-size: 22px !important;
+        line-height: 36px !important;
+        margin: 46px 30px 46px 0 !important;
+      }
+    }
+
+    .p1 {
+      >img {
+        width: 130px !important;
+        height: 150px !important;
+      }
+    }
+  }
+
+  .section4 {
+    margin-top: 150px !important;
+    height: 900px !important;
+
+    .right-nav {
+      img {
+        width: 70px !important;
+        height: 70px !important;
+      }
+
+      .title {
+        margin: 46px 30px 46px 0 !important;
+
+        >div {
+          font-size: 22px !important;
+          line-height: 36px !important;
+        }
+      }
+    }
+  }
+
+  .section5 {
+    margin-top: 150px !important;
+    height: 900px !important;
+
+    .left-nav {
+      img {
+        width: 70px !important;
+        height: 70px !important;
+      }
+
+      .title {
+        font-size: 22px !important;
+        line-height: 36px !important;
+        margin: 46px 30px 46px 0 !important;
+      }
+    }
+
+    .p1 {
+      >img {
+        width: 130px !important;
+        height: 150px !important;
+      }
+    }
+  }
+
+  .section6 {
+    margin-top: 150px !important;
+    height: 900px !important;
+
+    .right-nav {
+      img {
+        width: 70px !important;
+        height: 70px !important;
+      }
+
+      .title {
+        margin: 46px 30px 46px 0 !important;
+
+        >div {
+          font-size: 22px !important;
+          line-height: 36px !important;
+        }
+      }
+    }
+  }
+
+  .btn {
+    height: 76px !important;
+    line-height: 76px !important;
+    font-size: 30px !important;
+    padding: 0 90px !important;
   }
 }
 </style>

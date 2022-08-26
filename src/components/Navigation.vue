@@ -67,34 +67,34 @@ export default {
       }, {
         id: 3,
         name: 'answer',
-        url: '/blog'
+        url: '/question-answer'
       }, {
         id: 4,
         name: 'blog',
-        url: '/question-answer'
+        url: '/blog'
       }],
       Language: [{
         id: 1,
-        name: '英语',
+        name: 'English',
         lang: 'en'
       },
       {
         id: 2,
-        name: '泰语',
+        name: 'ประเทศไทย',
         lang: 'th'
       },
       {
         id: 3,
-        name: '越南语',
+        name: 'Việt nam',
         lang: 'vi'
       }, {
         id: 4,
-        name: '西班牙语',
+        name: 'español',
         lang: 'es'
       },
       {
         id: 5,
-        name: '葡萄牙语',
+        name: 'Português',
         lang: 'pt'
       }],
       topClass: '',
@@ -120,7 +120,7 @@ export default {
           this.active = item.id
         }
       })
-    }
+    },
   },
   mounted() {
     this.activeClass()

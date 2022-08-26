@@ -39,10 +39,45 @@ export default {
   apkpure: "App Store Apkpure",
   //博客
   module7_tit1: "Forum Misi Pergi Misi",
+  publicity_txt1:'Ada hadiah untuk undangan Mission Go, dan koin emas terus terakumulasi!',
+  publicity_txt2:"Acara undangan baru Mission Go telah dimulai!",
+  publicity_txt3:'Misi Pergi masuk untuk berbagi dan mengirim koin emas, datang dan berpartisipasi!',
   task1: "tugas terbaru",
   task2: "kegiatan resmi",
   task3: "tugas video",
   task4: "Tugas populer",
+  task1_txt1:
+    "Mission Go sign-in untuk memenangkan koin emas akan datang, sudahkah Anda check-in hari ini?",
+  task1_txt2:
+    "Ada hadiah untuk undangan Mission Go, koin emas terus dikumpulkan, dan ada banyak kejutan!",
+  task1_txt3:
+    "Datang ke Misi Pergi untuk bermain game dan menghasilkan uang dengan mudah, dan koin emas besar sedang menunggu Anda!",
+  task1_txt4:
+    "Manfaat pendatang baru telah dikirimkan, unduh aplikasi populer untuk menerima koin emas tugas eksklusif!",
+  task2_txt1:
+    "Tugas Mission Go yang populer akan datang, unduh APP untuk mendapatkan koin!",
+  task2_txt2:
+    "Mission Go sangat populer di kalangan penggemar, misi demo APP telah dirilis, dan Anda bisa mendapatkan banyak koin emas!",
+  task2_txt3:
+    "Pesta game melihat ke atas, trik amplifikasi misi baru Mission Go, coba game untuk mendapatkan koin emas!",
+  task2_txt4:
+    "Tugas mendapatkan kuesioner telah diperbarui, sangat sederhana dan sangat mudah, buka Mission Go untuk menyelesaikannya!",
+  task3_txt1:
+    "Manfaat Mission Go ada di sini, datang ke ruang siaran langsung selebriti Internet TT untuk membawa pulang barang-barang gratis!",
+  task3_txt2:
+    "Datang ke Misi Pergi untuk menonton video dan menukar koin emas dengan uang tunai! Menghasilkan uang sesederhana itu!",
+  task3_txt3:
+    "Misi video Mission Go akan datang, banyak koin emas dan hadiah, ayo unduh dan berpartisipasi!",
+  task3_txt4:
+    "Tugas kesejahteraan, tonton video setiap hari untuk mendapatkan koin emas dengan mudah, datang dan berpartisipasi!",
+  task4_txt1:
+    "Acara undangan baru Mission Go telah dimulai! Poin hadiah super kaya sedang menunggu Anda!",
+  task4_txt2:
+    "Mission Go memiliki acara baru~ Masuk dan bagikan untuk mendapatkan koin emas, datang dan berpartisipasi!",
+  task4_txt3:
+    "Mission Go telah meluncurkan acara untuk mengundang teman-teman untuk memenangkan koin emas. Datang dan undang teman untuk membantu Anda membuat daftar dan memenangkan hadiah besar!",
+  task4_txt4:
+    "Kontes Video Kreatif Media Sosial Mission Go telah dimulai, dan peserta dapat memenangkan hingga 5.000 koin!",
   //问答
   module8_tit: "Cara menghasilkan uang dari Mission Go",
   txt11: "kalau ada masalah?",

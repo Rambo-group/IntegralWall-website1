@@ -35,11 +35,6 @@ module.exports = {
       addStyleResource(config.module.rule("less").oneOf(type))
     );
   },
-
-  publicPath: "/",
-  assetsDir: "assets",
-  outputDir: "dist",
-  lintOnSave: false,
   productionSourceMap: false,
 };
 

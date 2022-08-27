@@ -140,13 +140,9 @@ export default {
     .fj(center);
     position: relative;
 
-    .containers {
-      padding: 0;
-    }
-
     .box {
       font-family: PingFang SC;
-      padding-top: 18%;
+      padding-top: 12%;
       animation: txtShow 4s;
       position: relative;
       z-index: 99;
@@ -168,7 +164,7 @@ export default {
       .btn {
         height: 88px;
         line-height: 88px;
-        padding: 0 105px;
+        padding: 0 90px;
         background: #5F16D9;
         border-radius: 22px;
         font-weight: bold;
@@ -199,8 +195,8 @@ export default {
     }
 
     .right {
-      width: 45%;
-      height: 85%;
+      width: 38%;
+      height: 80%;
       background: url(../assets/bg2.png) no-repeat;
       background-size: contain;
       position: absolute;
@@ -295,7 +291,7 @@ export default {
             border-radius: 22px;
             height: 88px;
             line-height: 88px;
-            padding: 0 105px;
+            padding: 0 90px;
             margin-top: 67px;
           }
         }
@@ -379,7 +375,7 @@ export default {
         .btn {
           height: 88px;
           line-height: 88px;
-          padding: 0 105px;
+          padding: 0 90px;
           background: #5F16D9;
           border-radius: 22px;
           font-weight: bold;
@@ -467,7 +463,7 @@ export default {
           .btn {
             height: 88px;
             line-height: 88px;
-            padding: 0 105px;
+            padding: 0 90px;
             background: #5F16D9;
             border-radius: 22px;
             font-weight: bold;
@@ -556,7 +552,7 @@ export default {
         .btn {
           height: 88px;
           line-height: 88px;
-          padding: 0 105px;
+          padding: 0 90px;
           background: #5F16D9;
           border-radius: 22px;
           font-weight: bold;
@@ -643,7 +639,7 @@ export default {
         .btn {
           height: 88px;
           line-height: 88px;
-          padding: 0 105px;
+          padding: 0 90px;
           background: #5F16D9;
           border-radius: 22px;
           font-weight: bold;
@@ -843,7 +839,7 @@ export default {
     height: 76px !important;
     line-height: 76px !important;
     font-size: 30px !important;
-    padding: 0 90px !important;
+    padding: 0 70px !important;
   }
 }
 </style>

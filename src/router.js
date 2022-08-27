@@ -6,37 +6,28 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Navigation",
-    component: () => import("./components/Navigation.vue"),
-    children: [
-      {
-        path: "/",
-        name: "home",
-        component: () => import("./views/Home.vue"),
-      },
-      {
-        path: "/download",
-        name: "download",
-        component: () => import("./views/Download.vue"),
-      },
-      {
-        path: "/blog",
-        name: "blog",
-        component: () => import("./views/Blog.vue"),
-      },
-      {
-        path: "/question-answer",
-        name: "question-answer",
-        component: () => import("./views/question-answer.vue"),
-      },
-    ],
+    name: "home",
+    component: () => import("./views/Home.vue"),
+  },
+  {
+    path: "/download",
+    name: "download",
+    component: () => import("./views/Download.vue"),
+  },
+  {
+    path: "/blog",
+    name: "blog",
+    component: () => import("./views/Blog.vue"),
+  },
+  {
+    path: "/question-answer",
+    name: "question-answer",
+    component: () => import("./views/question-answer.vue"),
   },
 ];
 
 const router = new VueRouter({
-  routes,
   mode: "history",
-  base: '/dist',
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition;
@@ -44,6 +35,8 @@ const router = new VueRouter({
       return { x: 0, y: 0 };
     }
   },
+  base: process.env.BASE_URL,
+  routes,
 });
 
 export default router;

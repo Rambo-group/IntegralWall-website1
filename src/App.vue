@@ -1,9 +1,22 @@
 <template>
   <div id="app">
+    <Header />
     <router-view />
+    <Footer />
   </div>
 </template>
 
+<script>
+import Header from "./components/Header.vue";
+import Footer from "./components/Footers.vue";
+
+export default {
+  components: {
+    Header,
+    Footer
+  }
+}
+</script>
 <style lang="less">
 * {
   margin: 0;
@@ -21,10 +34,12 @@ body {
 img {
   display: block;
 }
-ul{
+
+ul {
   margin: 0 !important;
   padding: 0 !important;
 }
+
 ul li {
   list-style: none;
 }
@@ -53,8 +68,8 @@ a:hover {
 
 .containers {
   width: 1200px;
-  padding-right: var(--bs-gutter-x, .75rem);
-  padding-left: var(--bs-gutter-x, .75rem);
+  // padding-right: var(--bs-gutter-x, .75rem);
+  // padding-left: var(--bs-gutter-x, .75rem);
   margin-right: auto;
   margin-left: auto;
 }
@@ -116,6 +131,7 @@ a:hover {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;

@@ -61,13 +61,12 @@ export default {
   }
 
   .right {
-    width: 60%;
+    width: 50%;
     height: 75%;
-    margin-top: 66px;
     background: url(../assets/bg3.png) no-repeat;
     background-size: contain;
     position: absolute;
-    top: 3%;
+    top: 0;
     right: 0;
     z-index: 1;
   }
@@ -151,7 +150,7 @@ export default {
 .btn {
   height: 88px;
   line-height: 88px;
-  padding: 0 105px;
+  padding: 0 90px;
   background: #5F16D9;
   border-radius: 22px;
   font-weight: bold;
@@ -169,7 +168,7 @@ export default {
     height: 76px !important;
     line-height: 76px !important;
     font-size: 30px !important;
-    padding: 0 90px !important;
+    padding: 0 70px !important;
   }
 
   .section2 {

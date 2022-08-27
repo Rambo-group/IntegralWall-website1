@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <section class="section1" id="section1">
-      <div class="containers">
         <div class="box">
           <div><img src="../assets/logo.png" alt=""></div>
           <div class="title">
@@ -14,7 +13,6 @@
         <div class="left">
         </div>
         <div class="right"></div>
-      </div>
     </section>
     <section class="section2" id="section2">
       <div class="title">{{ $t('module1_tit') }}</div>
@@ -142,10 +140,12 @@ export default {
 
     .box {
       font-family: PingFang SC;
-      padding-top: 12%;
       animation: txtShow 4s;
       position: relative;
       z-index: 99;
+      max-width: 1366px;
+      width: 100%;
+      padding: 12% 83px 0;
 
       img {
         width: 100px;

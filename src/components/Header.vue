@@ -61,7 +61,7 @@ export default {
       }],
       topClass: '',
       menuShow: false,
-      active: '1',
+      active: '',
       arrowstyle: 'transform: rotateZ(540deg);top:25%;left:108%',
     }
   },
@@ -83,8 +83,9 @@ export default {
     activeClass() {
       let path = this.$route.path
       this.list.forEach((item) => {
-        if (item.url === path) {
+        if (item.url == path) {
           this.active = item.id
+          console.log(11);
         }
       })
     },

@@ -2,15 +2,15 @@
   <div class="blog">
     <section class="section1">
       <div class="containers">
-        <div class="banner"></div>
+        <div class="banner"><a href="https://www.facebook.com/MissionGoing"><img src="../assets/blog_banner.png" alt=""></a></div>
         <div class="box">
-          <div><img src="../assets/publicity1.png" alt="">
+          <div><a href="https://t.me/missiongoing"><img src="../assets/publicity1.png" alt=""></a>
             <div class="txt">{{$t("publicity_txt1")}}</div>
           </div>
-          <div><img src="../assets/publicity2.png" alt="">
+          <div><a href="https://www.instagram.com/p/ChwfA59BHyI/?igshid=MDJmNzVkMjY%3D"><img src="../assets/publicity2.png" alt=""></a>
             <div class="txt">{{$t("publicity_txt2")}}</div>
           </div>
-          <div><img src="../assets/publicity3.png" alt="">
+          <div><a href="https://twitter.com/MissionGoGo"><img src="../assets/publicity3.png" alt=""></a>
             <div class="txt">{{$t("publicity_txt3")}}</div>
           </div>
         </div>
@@ -140,8 +140,11 @@ export default {
   .banner {
     margin-top: 32px;
     height: 500px;
-    background: url(../assets/blog_banner.png) no-repeat;
-    background-size: cover;
+    width: 100%;
+    >a>img{
+      width: 100%;
+      height: 100%
+    }
   }
 
   .box {
@@ -151,7 +154,7 @@ export default {
     >div {
         width: 366px;
 
-      >img {
+      >a>img {
         width: 100%;
         height: 200px;
       }

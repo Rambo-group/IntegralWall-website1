@@ -117,8 +117,9 @@ export default {
       flex-direction: column;
 
       img {
-        width: 340px;
-        height: 340px;
+        width: 270px;
+        height: 270px;
+        filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.08));
       }
 
       .tit {
@@ -179,8 +180,8 @@ export default {
     .box{
       >div{
         img{
-          width: 280px !important;
-          height: 280px !important;
+          width: 250px !important;
+          height: 250px !important;
         }
         .tit{
           font-size: 28px !important;

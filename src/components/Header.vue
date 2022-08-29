@@ -81,12 +81,13 @@ export default {
       }
     },
     activeClass() {
-      let path = this.$route.path
-      this.list.forEach((item) => {
-        if (item.url == path) {
-          this.active = item.id
-          console.log(11);
-        }
+      this.$router.onReady(() => {
+        let path = this.$route.path
+        this.list.forEach((item) => {
+          if (item.url == path) {
+            this.active = item.id
+          }
+        })
       })
     },
   },
